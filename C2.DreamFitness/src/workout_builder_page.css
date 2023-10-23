@@ -1,0 +1,124 @@
+.body-map__muscle path {
+    max-height: 100%;
+}
+
+#glutes path {
+    fill: white;
+}
+
+#glutes:hover path {
+    fill: rgb(230, 151, 62);
+}
+
+#hamstrings path {
+    fill: white;
+}
+
+#hamstrings:hover path {
+    fill: rgb(230, 151, 62);
+}
+
+#lowerback path {
+    fill: white;
+}
+
+#lowerback:hover path {
+    fill: rgb(230, 151, 62);
+}
+
+#lats path {
+    fill: white;
+}
+
+#lats:hover path {
+    fill: rgb(230, 151, 62);
+}
+
+#traps-middle path {
+    fill: white;
+}
+
+#traps-middle:hover path {
+    fill: rgb(230, 151, 62);
+}
+
+#traps path {
+    fill: white;
+}
+
+#traps:hover path {
+    fill: rgb(230, 151, 62);
+}
+
+#shoulders path {
+    fill: white;
+}
+
+#shoulders:hover path {
+    fill: rgb(230, 151, 62);
+}
+
+#calves path {
+    fill: white;
+}
+
+#calves:hover path {
+    fill: rgb(230, 151, 62);
+}
+
+#triceps path {
+    fill: white;
+}
+
+#triceps:hover path {
+    fill: rgb(230, 151, 62);
+}
+#forearms path {
+    fill: white;
+}
+
+#forearms:hover path {
+    fill: rgb(230, 151, 62);
+}
+#abdominals path {
+    fill: white;
+}
+
+#abdominals:hover path {
+    fill: rgb(230, 151, 62);
+}
+#obliques path {
+    fill: white;
+}
+
+#obliques:hover path {
+    fill: rgb(230, 151, 62);
+}
+#biceps path {
+    fill: white;
+}
+
+#biceps:hover path {
+    fill: rgb(230, 151, 62);
+}
+#chest path {
+    fill: white;
+}
+
+#chest:hover path {
+    fill: rgb(230, 151, 62);
+}
+#quads path {
+    fill: white;
+}
+
+#quads:hover path {
+    fill: rgb(230, 151, 62);
+}
+#calves path {
+    fill: white;
+}
+
+#calves:hover path {
+    fill: rgb(230, 151, 62);
+}

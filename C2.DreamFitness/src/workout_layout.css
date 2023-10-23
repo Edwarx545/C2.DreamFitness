@@ -1,0 +1,33 @@
+/* Style the parent div to center its content */
+.parent {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Style the smaller divs */
+.child {
+    display: inline-block;
+    /* Display the divs as inline blocks */
+    margin: 0 10px;
+    /* Add margin to separate them as needed */
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.parent a {
+    text-decoration: none;
+}
+
+.child h1 {
+    color: #36abb9;
+}
+
+.workout-image {
+    border: 1px solid rgb(233, 103, 103);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(177, 177, 177);
+}
