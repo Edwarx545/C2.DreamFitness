@@ -109,12 +109,36 @@
     <Content Include="App_Data\CapstoneDatabase_log.ldf">
       <DependentUpon>CapstoneDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="Findexercise.aspx" />
+    <Content Include="Findfood.aspx" />
     <Content Include="Forgot.aspx" />
     <Content Include="img\aboutus.jpg" />
+    <Content Include="img\ball1.jpg" />
+    <Content Include="img\chest.png" />
+    <Content Include="img\deadlift.jpg" />
+    <Content Include="img\food.jpg" />
+    <Content Include="img\food1.jpg" />
+    <Content Include="img\food10.jpg" />
+    <Content Include="img\food11.jpg" />
+    <Content Include="img\food12.jpg" />
+    <Content Include="img\food2.jpg" />
+    <Content Include="img\food3.jpg" />
+    <Content Include="img\food4.jpg" />
+    <Content Include="img\food5.jpg" />
+    <Content Include="img\food6.jpg" />
+    <Content Include="img\food7.jpg" />
+    <Content Include="img\food8.jpg" />
+    <Content Include="img\food9.jpg" />
+    <Content Include="img\kettlebell.png" />
     <Content Include="img\login.jpg" />
     <Content Include="img\logo.png" />
+    <Content Include="img\pull.jpg" />
+    <Content Include="img\pushup.jpg" />
+    <Content Include="img\squats.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="src\excercise.css" />
+    <Content Include="src\findfood.css" />
     <Content Include="src\forgot.css" />
     <Content Include="src\logged_in_homepage.css" />
     <Content Include="src\register.css" />
@@ -200,6 +224,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Findexercise.aspx.cs">
+      <DependentUpon>Findexercise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Findexercise.aspx.designer.cs">
+      <DependentUpon>Findexercise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Findfood.aspx.cs">
+      <DependentUpon>Findfood.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Findfood.aspx.designer.cs">
+      <DependentUpon>Findfood.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forgot.aspx.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

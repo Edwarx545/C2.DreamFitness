@@ -11,7 +11,7 @@ namespace C2.DreamFitness.App_Start
 {
 
 
-    public partial class Findexercise
+    public partial class Findfood
     {
     }
 }

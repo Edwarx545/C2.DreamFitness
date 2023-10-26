@@ -18,5 +18,13 @@ namespace C2.DreamFitness
             Session.Abandon();
             Response.Redirect("Default.aspx");
         }
+        protected void btn_findfood(object sender, EventArgs e)
+        {
+            Response.Redirect("Findfood.aspx");
+        }
+        protected void btn_findexercise(object sender, EventArgs e)
+        {
+            Response.Redirect("Findexercise.aspx");
+        }
     }
 }

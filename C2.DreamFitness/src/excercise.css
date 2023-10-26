@@ -1,0 +1,160 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --tenne-tawny: #0d6efd;
+    --tenne-tawny-dark: #0d6efd;
+}
+
+
+/* Reset some default styles and set a background color */
+body {
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    background-color: rgb(21, 21, 21);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+
+/* Style the banner */
+#banner {
+    text-align: center;
+    padding: 40px;
+}
+
+/* Style the classes section */
+#meal {
+    margin: 2.4rem 0;
+}
+
+.blog-row {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.blog-card {
+    overflow: hidden;
+    transition: .3s;
+}
+
+    .blog-card img {
+        transition: .3s;
+        width: 100%;
+        display: block;
+    }
+
+    .blog-card:hover img {
+        transform: scale(1.1);
+    }
+
+    .blog-card .blog-intro {
+        padding: 2rem 1rem;
+        color: #fff;
+    }
+
+.blog-intro p {
+    margin-bottom: 1rem;
+}
+
+.blog-intro a {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+}
+
+    .blog-intro a:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+    }
+.section-title {
+    text-align: center;
+    font-size: 140px;
+    display: block;
+    color: #2c234d;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-text-stroke: 1px #f6f7f8;
+    -webkit-text-fill-color: transparent;
+}
+.meal-search {
+    margin: 2rem 0;
+}
+
+    .meal-search cite {
+        font-size: 1rem;
+    }
+
+.meal-search-box {
+    margin: 3.0rem 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.search-control,
+.search-btn {
+    width: 100%;
+}
+
+.search-control {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid var(--tenne-tawny);
+    color: var(--tenne-tawny);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+    .search-control::placeholder {
+        color: var(--tenne-tawny);
+    }
+
+.search-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    background: var(--tenne-tawny);
+    color: #fff;
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+
+    .search-btn:hover {
+        background: var(--tenne-tawny-dark);
+    }
+@media screen and (min-width: 600px) {
+    .meal-search-box {
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

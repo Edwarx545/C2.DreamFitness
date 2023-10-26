@@ -36,6 +36,9 @@
                 .white-border:hover p {
                     color: white;
                 }
+                .white-border:hover a {
+                    color: white;
+                }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -59,7 +62,10 @@
                             <p class="text-start">Community</p>
                         </div>
                         <div class="me-4">
-                            <p class="find-food" id="btn_findfood">Find Food</p>
+                            <a class="text-start" <asp:LinkButton ID="Findfood" class="dropdown-item" runat="server" Text="Find Food" OnClick="btn_findfood" style="text-decoration: none" ForeColor="White" /></a>
+                        </div>
+                        <div class="me-4">
+                            <a class="text-start" <asp:LinkButton ID="Findexercise" class="dropdown-item" runat="server" Text="Find Exercise" OnClick="btn_findexercise" style="text-decoration: none" ForeColor="White" /></a>
                         </div>
                     </div>
 

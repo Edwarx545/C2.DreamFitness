@@ -33,6 +33,24 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Findfood control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Findfood;
+
+        /// <summary>
+        /// Findexercise control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Findexercise;
+
+        /// <summary>
         /// Logout2 control.
         /// </summary>
         /// <remarks>

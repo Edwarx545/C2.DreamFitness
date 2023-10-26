@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace C2.DreamFitness.App_Start
+namespace C2.DreamFitness
 {
 
 

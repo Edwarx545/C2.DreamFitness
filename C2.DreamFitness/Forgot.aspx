@@ -32,6 +32,9 @@
                 .white-border:hover p {
                     color: white;
                 }
+                .white-border:hover h2 {
+                    color: white;
+                }
     </style>
 </head>
 <body>
@@ -42,19 +45,20 @@
         <div class="form-box">
             <div class="form-value">
                 <form action="" runat="server">
-                    <h2>Forgot Password<</h2>
-                    <p>Enter your email address below to reset your password.</p>
+                    <h2>Forgot Password</h2>
+                    <p>Enter your email address below to reset your password</p>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required />
+                        <asp:TextBox ID="Forgot_email" runat="server" type="email" required />
                         <label for="">Email</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required />
+                        <asp:Textbox ID="Forgot_password" runat="server" type="password" required />
                         <label for="">Password</label>
                     </div>
-                    <button>Reset Password</button>
+                    <div> <asp:Label ID="lblErrorMessage2" runat="server" ForeColor="Red" Visible="False" /> </div>
+                    <div> <asp:Button ID ="forgot" runat="server" Text="Reset Password" Height="30px" Width="310px" OnClick="Btn_Reset" /> </div>
                     <div class="login">
                         <p>Remember your password? <a href="Login.aspx">Login</a></p>
                     </div>

@@ -54,7 +54,7 @@
                         <label for="">Password</label>
                     </div>
                     <div class="forget">
-                        <label for=""><input type="checkbox" />Remember Me&nbsp;&nbsp;&nbsp;&nbsp; <a href="forgot.html">Forgot Password?</a></label>
+                        <label for=""><input type="checkbox" />Remember Me&nbsp;&nbsp;&nbsp;&nbsp; <a href="Forgot.aspx">Forgot Password?</a></label>
                     </div>
                     <div>
                     <asp:Label ID="lblErrorMessage" runat="server" ForeColor="Red" Visible="False" /> </div>

@@ -12,7 +12,6 @@ namespace C2.DreamFitness
     public partial class Register : System.Web.UI.Page
     {
         LopKetNoi cn = new LopKetNoi();
-        int x;
         protected void Page_Load(object sender, EventArgs e)
         {
 
