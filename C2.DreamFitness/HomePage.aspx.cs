@@ -15,7 +15,7 @@ namespace C2.DreamFitness.App_Start
         }
         protected void navigateToWorkoutBuilderTypePage(object sender, EventArgs e)
         {
-            Response.Redirect("HomePage.aspx");
+            Server.Transfer("WorkoutBuilderTypePage.aspx");
         }
     }
 }

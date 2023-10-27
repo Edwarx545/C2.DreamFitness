@@ -11,25 +11,25 @@ namespace C2.DreamFitness
 {
 
 
-    public partial class Workout_Builder_Type
+    public partial class WorkoutInformationPage
     {
 
         /// <summary>
-        /// btnPersonalWorkout control.
+        /// DataList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnPersonalWorkout;
+        protected global::System.Web.UI.WebControls.DataList DataList1;
 
         /// <summary>
-        /// btnSystemWorkouts control.
+        /// DataList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnSystemWorkouts;
+        protected global::System.Web.UI.WebControls.DataList DataList2;
     }
 }

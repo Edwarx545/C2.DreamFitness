@@ -26,5 +26,9 @@ namespace C2.DreamFitness
         {
             Response.Redirect("Findexercise.aspx");
         }
+        protected void navigateToHomePage(object sender, EventArgs e)
+        {
+            Server.Transfer("HomePage.aspx");
+        }
     }
 }

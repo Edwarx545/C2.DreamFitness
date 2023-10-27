@@ -109,13 +109,16 @@
     <Content Include="App_Data\CapstoneDatabase_log.ldf">
       <DependentUpon>CapstoneDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="CreatePersonalizedWorkoutPage.aspx" />
     <Content Include="Findexercise.aspx" />
     <Content Include="Findfood.aspx" />
     <Content Include="Forgot.aspx" />
     <Content Include="img\aboutus.jpg" />
     <Content Include="img\ball1.jpg" />
     <Content Include="img\chest.png" />
+    <Content Include="img\dark-background.png" />
     <Content Include="img\deadlift.jpg" />
+    <Content Include="img\dumbbell-sumo-squat-resized.jpg" />
     <Content Include="img\food.jpg" />
     <Content Include="img\food1.jpg" />
     <Content Include="img\food10.jpg" />
@@ -129,10 +132,12 @@
     <Content Include="img\food7.jpg" />
     <Content Include="img\food8.jpg" />
     <Content Include="img\food9.jpg" />
+    <Content Include="img\health-benefits-of-pushups-GettyImages-498315681-7008d40842444270868c88b516496884.jpg" />
     <Content Include="img\kettlebell.png" />
     <Content Include="img\login.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="img\pull.jpg" />
+    <Content Include="img\pushup-img.jpg" />
     <Content Include="img\pushup.jpg" />
     <Content Include="img\squats.jpg" />
     <Content Include="Login.aspx" />
@@ -166,6 +171,9 @@
     <Content Include="img\df_logo_bg_removed.png" />
     <Content Include="img\kettlebells-dumbbells-gym-dark-transition-digital-composite-96251475.webp" />
     <Content Include="WorkoutBuilderTypePage.aspx" />
+    <Content Include="WorkoutGeneratedPage.aspx" />
+    <Content Include="WorkoutInformationPage.aspx" />
+    <Content Include="WorkoutTemplateSelectionPage.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="img\bodybuilder-working-out.png" />
     <Content Include="img\cardio-background.jpg" />
@@ -224,6 +232,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="constant\ConstantData.cs" />
+    <Compile Include="CreatePersonalizedWorkoutPage.aspx.cs">
+      <DependentUpon>CreatePersonalizedWorkoutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePersonalizedWorkoutPage.aspx.designer.cs">
+      <DependentUpon>CreatePersonalizedWorkoutPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Findexercise.aspx.cs">
       <DependentUpon>Findexercise.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -253,7 +269,9 @@
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connector.cs" />
+    <Compile Include="Connector.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -274,6 +292,7 @@
     <Compile Include="LopKetNoi.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="model\Exercise.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -302,6 +321,27 @@
     </Compile>
     <Compile Include="WorkoutBuilderTypePage.aspx.designer.cs">
       <DependentUpon>WorkoutBuilderTypePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkoutGeneratedPage.aspx.cs">
+      <DependentUpon>WorkoutGeneratedPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkoutGeneratedPage.aspx.designer.cs">
+      <DependentUpon>WorkoutGeneratedPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkoutInformationPage.aspx.cs">
+      <DependentUpon>WorkoutInformationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkoutInformationPage.aspx.designer.cs">
+      <DependentUpon>WorkoutInformationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkoutTemplateSelectionPage.aspx.cs">
+      <DependentUpon>WorkoutTemplateSelectionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkoutTemplateSelectionPage.aspx.designer.cs">
+      <DependentUpon>WorkoutTemplateSelectionPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

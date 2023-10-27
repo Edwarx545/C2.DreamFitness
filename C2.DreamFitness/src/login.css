@@ -116,3 +116,7 @@ button{
 	top: 0;
     left: 0;
 }
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+	top: -5px;
+}

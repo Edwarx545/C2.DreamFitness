@@ -28,17 +28,21 @@
             /* Add some padding to the div for visual effect */
         }
 
-            .white-border:hover {
-                background-color: #097fd9;
-                border: 1px solid #097fd9;
-            }
+        .white-border:hover {
+            background-color: #097fd9;
+            border: 1px solid #097fd9;
+        }
 
-                .white-border:hover p {
-                    color: white;
-                }
-                .white-border:hover a {
-                    color: white;
-                }
+        .white-border:hover p {
+            color: white;
+        }
+        .white-border:hover a {
+            color: white;
+        }
+        .menu-option{
+            text-decoration:none;
+            color:white;
+        }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -53,7 +57,9 @@
                 <div class="d-flex">
                     <div class="d-flex justify-content-end mt-1">
                         <div class="mx-4">
-                            <p class="text-start">Home</p>
+                            <asp:LinkButton runat="server" OnClick="navigateToHomePage" CssClass="menu-option" PostBackUrl="HomePage.aspx">
+                                <p class="text-start">Home</p>
+                            </asp:LinkButton>
                         </div>
                         <div class="me-4">
                             <p class="text-start">Categories</p>

@@ -13,5 +13,14 @@ namespace C2.DreamFitness
         {
 
         }
+        protected void navigateToWorkoutTemplateSelectionPage(object sender, EventArgs e)
+        {
+            Server.Transfer("WorkoutTemplateSelectionPage.aspx");
+        }
+
+        protected void navigateToCreatePersonalizedWorkoutPage(object sender, EventArgs e)
+        {
+            Server.Transfer("CreatePersonalizedWorkoutPage.aspx");
+        }
     }
 }

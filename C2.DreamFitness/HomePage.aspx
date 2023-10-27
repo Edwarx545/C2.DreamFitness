@@ -33,29 +33,28 @@
 
             <!-- explore our program -->
             <div>
-                <div class="container d-flex justify-content-between mt-5">
-                    <div>
-                        <h1 style="font-weight: bold;">Explore Our Program</h1>
-                    </div>
+            <div class="container d-flex justify-content-between mt-5">
+                <div>
+                    <h1 style="font-weight: bold;">Explore Our Program</h1>
+                </div>
+            </div>
+
+            <div class="container d-flex justify-content-between mt-5">
+                <div style="width: 300px">
+                    <asp:LinkButton ID="myLinkButton" runat="server" PostBackUrl="WorkoutBuilderTypePage.aspx" OnClick="navigateToWorkoutBuilderTypePage" Style="text-decoration: none; color: #FFFFFF;">
+                      <div class="ps-3 pt-3 white-border" style="height: 300px;">
+                        <img src="img\icons8-fitness-100 (1).png" alt="" style="height: 40px;margin-bottom: 20px;">
+                        <p style="font-size: 25px; font-weight: bold;">Workout</p>
+                        <p class="small-intro-text" style="font-size: 14px">Create and manage your workout schedule, and closely
+                          monitor your
+                          progress through intelligent tracking. Get ready to embark on a tailored fitness journey that evolves with
+                          you.</p>
+                      </div>
+                    </asp:LinkButton>
                 </div>
 
-                <div class="container d-flex justify-content-between mt-5">
-                    <div style="width: 300px">
-                        <asp:LinkButton ID="myLinkButton" runat="server" OnClick="navigateToWorkoutBuilderTypePage" Style="text-decoration: none; color: #FFFFFF;">
-          <div class="ps-3 pt-3 white-border" style="height: 300px;">
-            <img src="img\icons8-fitness-100 (1).png" alt="" style="height: 40px;margin-bottom: 20px;">
-            <p style="font-size: 25px; font-weight: bold;">Workout</p>
-            <p class="small-intro-text" style="font-size: 14px">Create and manage your workout schedule, and closely
-              monitor your
-              progress through intelligent tracking. Get ready to embark on a tailored fitness journey that evolves with
-              you.</p>
-          </div>
-                        </asp:LinkButton>
-                    </div>
-
-                    <div style="width: 300px">
-                        <asp:LinkButton ID="LinkButton1" runat="server"  Style="text-decoration: none; color: #FFFFFF;">
-
+                <div style="width: 300px">
+                    <asp:LinkButton ID="LinkButton1" runat="server" Style="text-decoration: none; color: #FFFFFF;">
                             <div class="ps-3 pt-3 white-border" style="height: 300px;">
                                 <img src="img\icons8-diet-64.png" alt="" style="height: 40px; margin-bottom: 20px;">
                                 <p style="font-size: 25px; font-weight: bold;">Diet</p>
@@ -64,10 +63,10 @@
               own plan to match your dietary preferences and goals.
                                 </p>
                             </div>
-                        </asp:LinkButton>
-                    </div>
-                    <div style="width: 300px;">
-                        <asp:LinkButton ID="LinkButton2" runat="server"  Style="text-decoration: none; color: #FFFFFF;">
+                    </asp:LinkButton>
+                </div>
+                <div style="width: 300px;">
+                    <asp:LinkButton ID="LinkButton2" runat="server" Style="text-decoration: none; color: #FFFFFF;">
 
                             <div class="ps-3 pt-3 white-border" style="height: 300px;">
                                 <img src="img\icons8-progress-100 (1).png" alt="" style="height: 40px; margin-bottom: 20px;">
@@ -78,10 +77,10 @@
               strides towards your fitness goals.
                                 </p>
                             </div>
-                        </asp:LinkButton>
-                    </div>
-                    <div style="width: 300px;">
-                        <asp:LinkButton ID="LinkButton3" runat="server"  Style="text-decoration: none; color: #FFFFFF;">
+                    </asp:LinkButton>
+                </div>
+                <div style="width: 300px;">
+                    <asp:LinkButton ID="LinkButton3" runat="server" Style="text-decoration: none; color: #FFFFFF;">
                             <div class="ps-3 pt-3 white-border" style="height: 300px;">
                                 <img src="img\icons8-ai-100.png" alt="" style="height: 40px; margin-bottom: 20px;">
                                 <p style="font-size: 25px; font-weight: bold;">Chatbot</p>
@@ -91,10 +90,10 @@
               make informed choices on your journey to better health and fitness.
                                 </p>
                             </div>
-                        </asp:LinkButton>
-                    </div>
+                    </asp:LinkButton>
                 </div>
             </div>
+        </div>
         </div>
     </body>
 </asp:Content>
