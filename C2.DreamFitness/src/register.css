@@ -9,7 +9,7 @@ section {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	width: 100;
+	width: 100%;
 	background: url(../img/login.jpg)no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -31,13 +31,13 @@ h2{
 	color: #fff;
 	text-align: center;
 }
-.inputbox{
+.inputbox1{
 	position: relative;
 	margin: 30px 0;
 	width: 310px;
 	border-bottom: 2px solid #fff;
 }
-.inputbox label{
+.inputbox1 label{
 	position: absolute;
 	top: 50%;
 	left: 5px;
@@ -47,11 +47,11 @@ h2{
 	pointer-events: none;
 	transition: .5s;
 }
-input:focus ~ label,
-input:focus ~ :valid{
+.inputbox1 input:focus ~ label,
+.inputbox1 input:valid ~ label{
 	top: -5px;
 }
-.inputbox input{
+.inputbox1 input{
 	width: 100%;
 	height: 50px;
 	background: transparent;
@@ -61,7 +61,7 @@ input:focus ~ :valid{
 	padding:0 35px 0 5px;
 	color: #fff;
 }
-.inputbox ion-icon{
+.inputbox1 ion-icon{
 	position: absolute;
 	right: 8px;
 	color: #fff;

@@ -4,11 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="icon" href="img/logo.png" type="img/logo.png">
-    <link  rel="stylesheet" href="src/forgot.css">
+    <link rel="icon" href="img/logo.png" type="img/logo.png"/>
+    <link  rel="stylesheet" href="src/forgot.css"/>
     <title>Dream Fitness - Forgot Password</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
@@ -40,19 +40,19 @@
 <body>
     <section>
         <div id="banner">
-            <img src="/img/logo.png">
+            <img src="/img/logo.png"/>
         </div>
         <div class="form-box">
             <div class="form-value">
                 <form action="" runat="server">
                     <h2>Forgot Password</h2>
                     <p>Enter your email address below to reset your password</p>
-                    <div class="inputbox">
+                    <div class="inputbox2">
                         <ion-icon name="mail-outline"></ion-icon>
                         <asp:TextBox ID="Forgot_email" runat="server" type="email" required />
                         <label for="">Email</label>
                     </div>
-                    <div class="inputbox">
+                    <div class="inputbox2">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                         <asp:Textbox ID="Forgot_password" runat="server" type="password" required />
                         <label for="">Password</label>
