@@ -44,22 +44,22 @@
             <div class="form-value">
                 <form action="" runat="server">
                     <h2>Register</h2>
-                    <div class="inputbox">
+                    <div class="inputbox1">
                         <ion-icon name="person-outline"></ion-icon>
                         <asp:Textbox ID="Register_name" runat="server" type="text" required />
                         <label for="">Full Name</label>
                     </div>
-                    <div class="inputbox">
+                    <div class="inputbox1">
                         <ion-icon name="mail-outline"></ion-icon>
                         <asp:TextBox ID="Register_email" runat="server" type="email" required />
                         <label for="">Email</label>
                     </div>
-                    <div class="inputbox">
+                    <div class="inputbox1">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                         <asp:Textbox ID="Register_password" runat="server" type="password" required />
                         <label for="">Password</label>
                     </div>
-                    <div class="inputbox">
+                    <div class="inputbox1">
                         <ion-icon name="lock-closed-outline"></ion-icon>
                         <asp:Textbox ID="Confirm_password" runat="server" type="password" required />
                         <label for="">Confirm Password</label>
