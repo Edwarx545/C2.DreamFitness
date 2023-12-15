@@ -14,14 +14,11 @@ namespace C2.DreamFitness
         {
             if (IsPostBack) return;
             string sql;
-
             sql = "select * from WorkoutTemplate";
 
 
             DataList1.DataSource = ketnoi.docdulieu(sql);
             DataList1.DataBind();
-
-
         }
         protected void btnXemThongTin_Click(object sender, EventArgs e)
         {

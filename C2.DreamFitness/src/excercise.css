@@ -31,13 +31,11 @@ header {
     min-height: 100vh;
 }
 
-
 /* Style the banner */
 #banner {
     text-align: center;
     padding: 40px;
 }
-
 /* Style the classes section */
 #meal {
     margin: 2.4rem 0;
@@ -119,7 +117,7 @@ header {
 
 .search-control {
     padding: 0 1rem;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-family: inherit;
     outline: 0;
     border: 1px solid var(--tenne-tawny);
@@ -132,9 +130,19 @@ header {
         color: var(--tenne-tawny);
     }
 
-.search-btn {
+.btnsearch1 {
+    background: var(--tenne-tawny);
+    padding: 0 5rem;
+    font-size: 1.4rem;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid var(--tenne-tawny);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.btnSearch {
     width: 55px;
-    height: 55px;
+    height: 35px;
     font-size: 1.8rem;
     background: var(--tenne-tawny);
     color: #fff;
@@ -148,7 +156,7 @@ header {
     -o-transition: all 0.4s linear;
 }
 
-    .search-btn:hover {
+    .btnSearch:hover {
         background: var(--tenne-tawny-dark);
     }
 @media screen and (min-width: 600px) {

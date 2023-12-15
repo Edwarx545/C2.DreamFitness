@@ -7,19 +7,25 @@
         <div class="blog-sec">
             <h1 class="section-title">Excercise</h1>
             <div class="meal-search-box">
-                <input type="text" class="search-control" placeholder="Enter an excercise" id="search-input">
-                <button type="submit" class="search-btn btn" id="search-btn">
-                    <i class="fas fa-search"></i>
-                </button>
+                <asp:TextBox ID="txtSearch" class="search-control" runat="server" placeholder="Enter an excercise"></asp:TextBox>
+                <asp:Button ID="btnSearch" class="btnsearch1" runat="server" OnClick="btnSearch_Click">
             </div>
-            <div class="blog-row">
-                <div class="blog-card">
-                    <img src="img/deadlift.jpg">
-                    <div class="blog-intro">
-                        <p>Deadlift</p>
+            <div>
+                <asp:DataList ID="DataList3" runat="server" Style="justify-content: space-between;" RepeatColumns="3" RepeatDirection="Vertical">
+                    <ItemTemplate>
+                        <div class="" style="margin: 20px; width: auto">
+                            <asp:Image ID="Image1" runat="server" Style="width: auto; height: 325px" ImageUrl='<%# Eval("exercise_img")%>'></asp:Image>
+                            <asp:LinkButton ID="exerciseid" runat="server" OnClick="btn_ThongTinExercise" Style="display: flex; flex-direction: column; align-items: center;" Text='<%# Eval("exercise_name") %>' CommandArgument='<%# Eval("exercise_id") %>'></asp:LinkButton>
+                            <p></p>
+                            <asp:Label ID="Label3" runat="server" Text='<%# "Gender: " + Eval("exercise_gender") %>'></asp:Label>
+                            <p></p>
+                            <asp:Label ID="Label2" runat="server" class="" Text='<%# "Age: " + Eval("exercise_age") %>'> </asp:Label>
+                            <p></p>
+                            <asp:Label ID="Label4" runat="server" class="" Text='<%# "Muscle Group: " + Eval("muscle_group_name") %>'> </asp:Label>
+                            <p></p>
                     </div>
-                </div>
-                <div class="blog-card">
+                    </ItemTemplate>
+                </asp:DataList>
                     <img src="img/squats.jpg">
                     <div class="blog-intro">
                         <p>Squats</p>
