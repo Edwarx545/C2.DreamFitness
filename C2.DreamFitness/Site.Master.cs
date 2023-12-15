@@ -30,5 +30,10 @@ namespace C2.DreamFitness
         {
             Server.Transfer("HomePage.aspx");
         }
+        protected void navigateToMyWorkouts(object sender, EventArgs e)
+        {
+            Response.Redirect("MyWorkouts.aspx");
+        }
+        
     }
 }

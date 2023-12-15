@@ -79,5 +79,10 @@ namespace C2.DreamFitness
             }
             return kq;
         }
+
+        public SqlConnection getConnection()
+        {
+            return cn;
+        }
     }
 }

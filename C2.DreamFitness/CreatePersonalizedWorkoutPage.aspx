@@ -636,14 +636,14 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="numberInput">Weight:</label>
-                                        <input type="number" class="form-control" id="numberInput" step="0.1"
+                                        <input type="number" class="form-control" id="weightInput" step="0.1"
                                             placeholder="Exp. 55.6">
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="numberInput">Age</label>
-                                        <input type="number" class="form-control" id="numberInput" placeholder="Exp. 18">
+                                        <input type="number" class="form-control" id="ageInput" placeholder="Exp. 18">
                                     </div>
                                 </div>
                             </div>
@@ -657,7 +657,7 @@
                                 </div>
                                 <div class="col">
                                     <label class="form-label">Fitness Level</label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" id="fitnessLevelSelect" aria-label="Default select example">
                                         <option selected value="beginner">Beginner</option>
                                         <option value="intermediate">Intermediate</option>
                                         <option value="advanced">Advanced</option>
@@ -679,9 +679,17 @@
                     </div>
                     <div style="text-align: end; margin-top: 20px;">
                         <asp:Button type="button" runat="server" OnClick="go" class="btn btn-primary" Style="background-color: #36abb9;" Text="Continue"></asp:Button>
-                        <asp:Label ID="Label1" runat="server" Text="Label" EnableViewState="true">text</asp:Label>
                         <asp:HiddenField ID="hfLabelText" runat="server" />
-                        <asp:Label ID="Label2" runat="server" Text="Label" EnableViewState="true">text</asp:Label>
+                        <asp:HiddenField ID="hfAge" runat="server" />
+                        <asp:HiddenField ID="hfWeight" runat="server" />
+                        <asp:HiddenField ID="hfGender" runat="server" />
+                        <asp:HiddenField ID="hfLevel" runat="server" />
+                    </div>
+                    <div>
+                        <asp:Label ID="Label1" runat="server" Text="Label" EnableViewState="true">text</asp:Label>
+                    </div>
+                    <div>
+                       <asp:Label ID="errorMessage" runat="server" Text="Please Check Your Input Again!"></asp:Label>
                     </div>
                 </div>
             </div>
@@ -695,7 +703,15 @@
             const genderSelect = document.getElementById('genderSelect');
             const maleDiv = document.getElementById('male_body');
             const femaleDiv = document.getElementById('female_body');
+            var gender = "Male";
+            document.getElementById('<%= hfGender.ClientID %>').value = gender;
 
+            window.onload = function () {
+                document.getElementById("weightInput").value = "";
+                document.getElementById('ageInput').value = "";
+                document.getElementById("genderSelect").value = "Male";
+            };
+            
 
             // Add an event listener to the select element
             genderSelect.addEventListener('change', function () {
@@ -703,14 +719,49 @@
                     maleDiv.style.display = 'block';
                     femaleDiv.style.display = 'none';
                     changeGender();
+                    gender = "Male";
+                    document.getElementById('<%= hfGender.ClientID %>').value = gender;
                 } else if (genderSelect.value === 'Female') {
                     maleDiv.style.display = 'none';
                     femaleDiv.style.display = 'block';
                     changeGender();
+                    gender = "Female";
+                    document.getElementById('<%= hfGender.ClientID %>').value = gender;
                 }
             });
 
+            var fitnessLevelSelect = document.getElementById("fitnessLevelSelect");
+            var selectedOption = fitnessLevelSelect.options[fitnessLevelSelect.selectedIndex];
 
+            var fitnessLevel = selectedOption.text;
+            document.getElementById('<%= hfLevel.ClientID %>').value = fitnessLevel;
+
+            fitnessLevelSelect.addEventListener('change', function () {
+                if (fitnessLevelSelect.value === 'beginner') {
+                    document.getElementById('<%= hfLevel.ClientID %>').value = 'beginner';
+                }
+                else if (fitnessLevelSelect.value === 'intermediate') {
+                    document.getElementById('<%= hfLevel.ClientID %>').value = 'intermediate';
+                }
+                else if (fitnessLevelSelect.value === 'advanced') {
+                    document.getElementById('<%= hfLevel.ClientID %>').value = 'advanced';
+                }
+            })
+
+            document.getElementById('weightInput').addEventListener('change', function () {
+                var weight = document.getElementById('weightInput').value;
+                document.getElementById('<%= hfWeight.ClientID %>').value = weight;
+
+                console.log(document.getElementById('<%= hfWeight.ClientID %>').value);
+            })
+
+            document.getElementById('ageInput').addEventListener('change', function () {
+                var age = document.getElementById('ageInput').value;
+                document.getElementById('<%= hfAge.ClientID %>').value = age;
+
+                console.log(document.getElementById('<%= hfAge.ClientID %>').value);
+            })
+            
 
             let muscleGroups = [];
             //get all the <g> elements
@@ -747,7 +798,7 @@
                     });
                     document.getElementById('<%= hfLabelText.ClientID %>').value = temp;
                     var label = document.getElementById('<%= Label1.ClientID %>');
-                    label.innerText = temp;
+                    label.innerText = temp + " length: " + muscleGroups.length;
                     isClicked = !isClicked;
                 })
             })

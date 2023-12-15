@@ -15,7 +15,7 @@ namespace C2.DreamFitness
             if (IsPostBack) return;
             string sql;
 
-            sql = "select * from WorkoutTemplate";
+            sql = "SELECT *\r\nFROM     dbo.SystemCreatedWorkout INNER JOIN\r\n                  dbo.WorkoutTemplate ON dbo.SystemCreatedWorkout.workout_template_id = dbo.WorkoutTemplate.workout_template_id";
 
 
             DataList1.DataSource = ketnoi.docdulieu(sql);

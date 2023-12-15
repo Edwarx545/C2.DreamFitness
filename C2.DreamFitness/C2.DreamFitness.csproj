@@ -141,6 +141,8 @@
     <Content Include="img\pushup.jpg" />
     <Content Include="img\squats.jpg" />
     <Content Include="Login.aspx" />
+    <Content Include="MySchedule.aspx" />
+    <Content Include="MyWorkouts.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="src\excercise.css" />
     <Content Include="src\findfood.css" />
@@ -170,6 +172,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="img\df_logo_bg_removed.png" />
     <Content Include="img\kettlebells-dumbbells-gym-dark-transition-digital-composite-96251475.webp" />
+    <Content Include="UsersWorkoutInformation.aspx" />
     <Content Include="WorkoutBuilderTypePage.aspx" />
     <Content Include="WorkoutGeneratedPage.aspx" />
     <Content Include="WorkoutInformationPage.aspx" />
@@ -293,6 +296,20 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="model\Exercise.cs" />
+    <Compile Include="MySchedule.aspx.cs">
+      <DependentUpon>MySchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MySchedule.aspx.designer.cs">
+      <DependentUpon>MySchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyWorkouts.aspx.cs">
+      <DependentUpon>MyWorkouts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyWorkouts.aspx.designer.cs">
+      <DependentUpon>MyWorkouts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -307,6 +324,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UsersWorkoutInformation.aspx.cs">
+      <DependentUpon>UsersWorkoutInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersWorkoutInformation.aspx.designer.cs">
+      <DependentUpon>UsersWorkoutInformation.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

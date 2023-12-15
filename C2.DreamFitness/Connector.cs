@@ -32,7 +32,7 @@ namespace C2.DreamFitness
             }
             catch
             {
-                //Response.Write("Lỗi");
+                Response.Write("Lỗi");
                 dt = null;
             }
             finally
@@ -52,7 +52,7 @@ namespace C2.DreamFitness
             }
             catch
             {
-                //lỗi
+                kq = 0;
             }
             finally
             {
