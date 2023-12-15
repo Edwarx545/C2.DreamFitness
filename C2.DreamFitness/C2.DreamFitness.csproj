@@ -45,6 +45,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PayPal, Version=1.9.1.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.9.1\lib\net451\PayPal.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -110,8 +113,130 @@
       <DependentUpon>CapstoneDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="CreatePersonalizedWorkoutPage.aspx" />
+    <Content Include="FailureView.aspx" />
     <Content Include="Findexercise.aspx" />
     <Content Include="Findfood.aspx" />
+    <Content Include="FoodDetails.aspx" />
+    <Content Include="food\almond_cranberry_energy_bars_image.jpg" />
+    <Content Include="food\apple_cinnamon_pancakes_image.jpg" />
+    <Content Include="food\apple_slices_almond_butter_image.jpg" />
+    <Content Include="food\avocado_toast_cherry_tomatoes_image.jpg" />
+    <Content Include="food\avocado_toast_image.jpg" />
+    <Content Include="food\bacon_egg_sandwich_image.jpg" />
+    <Content Include="food\baked_salmon_lemon_herbs_image.jpg" />
+    <Content Include="food\banana_almond_smoothie_image.jpg" />
+    <Content Include="food\banana_nut_muffin_image.jpg" />
+    <Content Include="food\banana_pancakes_image.jpg" />
+    <Content Include="food\banana_peanut_butter_smoothie_image.jpg" />
+    <Content Include="food\bbq_chicken_sandwich_image.jpg" />
+    <Content Include="food\bbq_pulled_pork_sliders_image.jpg" />
+    <Content Include="food\beef_broccoli_stir_fry_image.jpg" />
+    <Content Include="food\beef_tenderloin_garlic_rosemary_image.jpg" />
+    <Content Include="food\beef_vegetable_stir_fry_noodles_image.jpg" />
+    <Content Include="food\blueberry_muffin_image.jpg" />
+    <Content Include="food\breakfast_burrito_image.jpg" />
+    <Content Include="food\breakfast_hash_image.jpg" />
+    <Content Include="food\breakfast_parfait_image.jpg" />
+    <Content Include="food\breakfast_quesadilla_image.jpg" />
+    <Content Include="food\breakfast_wrap_image.jpg" />
+    <Content Include="food\butternut_squash_risotto_image.jpg" />
+    <Content Include="food\caesar_wrap_grilled_salmon_image.jpg" />
+    <Content Include="food\caprese_sandwich_image.jpg" />
+    <Content Include="food\caprese_skewers_cherry_tomatoes_image.jpg" />
+    <Content Include="food\chia_seed_pudding_image.jpg" />
+    <Content Include="food\chicken_caesar_salad_image.jpg" />
+    <Content Include="food\chicken_fajita_wraps_image.jpg" />
+    <Content Include="food\chicken_quinoa_stuffed_bell_peppers_image.jpg" />
+    <Content Include="food\chicken_quinoa_stuffed_bell_peppers_image.jpg.jpg" />
+    <Content Include="food\chicken_vegetable_kebabs_image.jpg" />
+    <Content Include="food\chocolate_dipped_strawberries_image.jpg" />
+    <Content Include="food\chocolate_protein_smoothie_image.jpg" />
+    <Content Include="food\cinnamon_roll_image.jpg" />
+    <Content Include="food\coconut_chia_pudding_image.jpg" />
+    <Content Include="food\cottage_cheese_pineapple_almonds_image.jpg" />
+    <Content Include="food\creamy_chicken_alfredo_pasta_image.jpg" />
+    <Content Include="food\creamy_garlic_mushroom_chicken_image.jpg" />
+    <Content Include="food\creamy_mushroom_risotto_image.jpg" />
+    <Content Include="food\cucumber_rolls_cream_cheese_herbs_image.jpg" />
+    <Content Include="food\cucumber_tzatziki_bites_image.jpg" />
+    <Content Include="food\edamame_sea_salt_image.jpg" />
+    <Content Include="food\eggplant_parmesan_image.jpg" />
+    <Content Include="food\energy_bites_oats_peanut_butter_image.jpg" />
+    <Content Include="food\fruit_nut_trail_mix_image.jpg" />
+    <Content Include="food\fruit_salad_image.jpg" />
+    <Content Include="food\granola_bars_dark_chocolate_image.jpg" />
+    <Content Include="food\greek_yogurt_fruits_image.jpg" />
+    <Content Include="food\greek_yogurt_honey_berries_image.jpg" />
+    <Content Include="food\greek_yogurt_mixed_berries_granola_image.jpg" />
+    <Content Include="food\grilled_chicken_quinoa_bowl_image.jpg" />
+    <Content Include="food\grilled_chicken_salad_image.jpg" />
+    <Content Include="food\grilled_shrimp_vegetable_skewers_image.jpg" />
+    <Content Include="food\grilled_teriyaki_beef_skewers_image.jpg" />
+    <Content Include="food\grilled_vegetable_feta_salad_image.jpg" />
+    <Content Include="food\ham_cheese_croissant_image.jpg" />
+    <Content Include="food\honey_glazed_grilled_chicken_image.jpg" />
+    <Content Include="food\honey_mustard_glazed_salmon_image.jpg" />
+    <Content Include="food\hummus_vegetable_sticks_image.jpg" />
+    <Content Include="food\lean_beef_vegetable_stir_fry_image.jpg" />
+    <Content Include="food\lentil_soup_image.jpg" />
+    <Content Include="food\lentil_vegetable_curry_image.jpg" />
+    <Content Include="food\mediterranean_grilled_cheese_image.jpg" />
+    <Content Include="food\mediterranean_quinoa_salad_image.jpg" />
+    <Content Include="food\mediterranean_stuffed_mushrooms_image.jpg" />
+    <Content Include="food\mini_fruit_kabobs_image.jpg" />
+    <Content Include="food\mixed_nuts_dried_fruits_image.jpg" />
+    <Content Include="food\oatmeal_image.jpg" />
+    <Content Include="food\pan_seared_sea_bass_lemon_butter_image.jpg" />
+    <Content Include="food\pasta_primavera_image.jpg" />
+    <Content Include="food\peanut_butter_toast_image.jpg" />
+    <Content Include="food\pesto_pasta_cherry_tomatoes_image.jpg" />
+    <Content Include="food\pineapple_cottage_cheese_bowl_image.jpg" />
+    <Content Include="food\popcorn_parmesan_herbs_image.jpg" />
+    <Content Include="food\protein_packed_turkey_chili_image.jpg" />
+    <Content Include="food\protein_shake_banana_almond_milk_image.jpg" />
+    <Content Include="food\protein_smoothie_image.jpg" />
+    <Content Include="food\quinoa_black_bean_bowl_image.jpg" />
+    <Content Include="food\quinoa_black_bean_salad_image.jpg" />
+    <Content Include="food\quinoa_vegetable_frittata_image.jpg" />
+    <Content Include="food\ratatouille_herbed_couscous_image.jpg" />
+    <Content Include="food\roasted_chickpeas_spices_image.jpg" />
+    <Content Include="food\salmon_avocado_salad_image.jpg" />
+    <Content Include="food\salmon_quinoa_salad_image.jpg" />
+    <Content Include="food\scrambled_eggs_image.jpg" />
+    <Content Include="food\shrimp_avocado_salad_image.jpg" />
+    <Content Include="food\shrimp_pasta_garlic_herbs_image.jpg" />
+    <Content Include="food\shrimp_scampi_linguine_image.jpg" />
+    <Content Include="food\smoked_salmon_bagel_image.jpg" />
+    <Content Include="food\smoked_turkey_avocado_toast_image.jpg" />
+    <Content Include="food\smoothie_bowl_image.jpg" />
+    <Content Include="food\spinach_feta_omelette_image.jpg" />
+    <Content Include="food\spinach_mushroom_frittata_image.jpg" />
+    <Content Include="food\spinach_mushroom_stuffed_chicken_image.jpg" />
+    <Content Include="food\strawberry_banana_smoothie_bowl_image.jpg" />
+    <Content Include="food\strawberry_yogurt_parfait_image.jpg" />
+    <Content Include="food\stuffed_bell_peppers_quinoa_image.jpg" />
+    <Content Include="food\sweet_potato_protein_pancakes_image.jpg" />
+    <Content Include="food\teriyaki_chicken_rice_bowl_image.jpg" />
+    <Content Include="food\tuna_salad_wrap_image.jpg" />
+    <Content Include="food\turkey_avocado_whole_grain_wrap_image.jpg" />
+    <Content Include="food\turkey_avocado_wrap_image.jpg" />
+    <Content Include="food\turkey_club_sandwich_image.jpg" />
+    <Content Include="food\turkey_cranberry_wrap_image.jpg" />
+    <Content Include="food\turkey_vegetable_wrap_image.jpg" />
+    <Content Include="food\vegetable_bean_burrito_bowl_image.jpg" />
+    <Content Include="food\vegetable_chicken_fajitas_image.jpg" />
+    <Content Include="food\vegetable_curry_rice_image.jpg" />
+    <Content Include="food\vegetable_lasagna_image.jpg" />
+    <Content Include="food\vegetable_lentil_curry_image.jpg" />
+    <Content Include="food\vegetable_omelette_image.jpg" />
+    <Content Include="food\vegetable_quinoa_stuffed_peppers_image.jpg" />
+    <Content Include="food\vegetable_stir_fry_tofu_image.jpg" />
+    <Content Include="food\veggie_chips_image.jpg" />
+    <Content Include="food\waffle_with_berries_image.jpg" />
+    <Content Include="food\whole_grain_crackers_cheese_image.jpg" />
+    <Content Include="food\whole_grain_wrap_tuna_avocado_image.jpg" />
+    <Content Include="food\whole_wheat_pancakes_image.jpg" />
+    <Content Include="food\yogurt_parfait_granola_image.jpg" />
     <Content Include="Forgot.aspx" />
     <Content Include="img\aboutus.jpg" />
     <Content Include="img\ball1.jpg" />
@@ -139,10 +264,12 @@
     <Content Include="img\pull.jpg" />
     <Content Include="img\pushup-img.jpg" />
     <Content Include="img\pushup.jpg" />
+    <Content Include="img\searchicon.png" />
     <Content Include="img\squats.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="MySchedule.aspx" />
     <Content Include="MyWorkouts.aspx" />
+    <Content Include="PaymentWithPaypal.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="src\excercise.css" />
     <Content Include="src\findfood.css" />
@@ -172,6 +299,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="img\df_logo_bg_removed.png" />
     <Content Include="img\kettlebells-dumbbells-gym-dark-transition-digital-composite-96251475.webp" />
+    <Content Include="SuccessView.aspx" />
+    <Content Include="UserProfile.aspx" />
     <Content Include="UsersWorkoutInformation.aspx" />
     <Content Include="WorkoutBuilderTypePage.aspx" />
     <Content Include="WorkoutGeneratedPage.aspx" />
@@ -243,6 +372,13 @@
     <Compile Include="CreatePersonalizedWorkoutPage.aspx.designer.cs">
       <DependentUpon>CreatePersonalizedWorkoutPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FailureView.aspx.cs">
+      <DependentUpon>FailureView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FailureView.aspx.designer.cs">
+      <DependentUpon>FailureView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Findexercise.aspx.cs">
       <DependentUpon>Findexercise.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -256,6 +392,13 @@
     </Compile>
     <Compile Include="Findfood.aspx.designer.cs">
       <DependentUpon>Findfood.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FoodDetails.aspx.cs">
+      <DependentUpon>FoodDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FoodDetails.aspx.designer.cs">
+      <DependentUpon>FoodDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forgot.aspx.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
@@ -296,6 +439,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="model\Exercise.cs" />
+    <Compile Include="model\PaypalConfiguaration.cs" />
     <Compile Include="MySchedule.aspx.cs">
       <DependentUpon>MySchedule.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -309,6 +453,13 @@
     </Compile>
     <Compile Include="MyWorkouts.aspx.designer.cs">
       <DependentUpon>MyWorkouts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentWithPaypal.aspx.cs">
+      <DependentUpon>PaymentWithPaypal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentWithPaypal.aspx.designer.cs">
+      <DependentUpon>PaymentWithPaypal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
@@ -324,6 +475,20 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessView.aspx.cs">
+      <DependentUpon>SuccessView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuccessView.aspx.designer.cs">
+      <DependentUpon>SuccessView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="UsersWorkoutInformation.aspx.cs">
       <DependentUpon>UsersWorkoutInformation.aspx</DependentUpon>

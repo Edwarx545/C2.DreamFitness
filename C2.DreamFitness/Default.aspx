@@ -62,7 +62,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="Login.aspx">Login</a>
-                                <a class="dropdown-item" href="Resgiter.aspx">Resgiter</a>
+                                <a class="dropdown-item" href="Register.aspx">Resgiter</a>
                             </div>
                         </div>
                     </div>
