@@ -15,8 +15,17 @@ namespace C2.DreamFitness
         }
         protected void btn_Logout(object sender, EventArgs e)
         {
-            Session.Abandon();
-            Response.Redirect("Default.aspx");
+            //Session["user_email"] = null;
+
+            // Redirect đến trang đăng nhập
+            // Response.Redirect("Login.aspx");
+            if (Request.Cookies["AuthCookie"] != null)
+            {
+                HttpCookie authCookie = new HttpCookie("AuthCookie");
+                authCookie.Expires = DateTime.Now.AddYears(-1);
+                Response.Cookies.Add(authCookie);
+            }
+            Server.Transfer("Default.aspx");
         }
         protected void btn_findfood(object sender, EventArgs e)
         {

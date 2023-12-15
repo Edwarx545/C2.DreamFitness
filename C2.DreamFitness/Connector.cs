@@ -41,6 +41,27 @@ namespace C2.DreamFitness
             }
             return dt;
         }
+        public DataTable docdulieu(string sql, params SqlParameter[] parameters) // dùng overload để thêm tham số parameter
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                layketnoi();
+                SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+                da.SelectCommand.Parameters.AddRange(parameters);
+                da.Fill(dt);
+            }
+            catch
+            {
+                // Handle the exception appropriately
+                dt = null;
+            }
+            finally
+            {
+                dongketnoi();
+            }
+            return dt;
+        }
         public int CapNhat(string sql)
         {
             int kq = 0;
@@ -52,7 +73,7 @@ namespace C2.DreamFitness
             }
             catch
             {
-                //lỗi
+                Response.Write("Loi");
             }
             finally
             {

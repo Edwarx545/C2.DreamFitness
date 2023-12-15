@@ -13,5 +13,8 @@ namespace C2.DreamFitness.App_Start
 
     public partial class Findfood
     {
+        protected global::System.Web.UI.WebControls.DataList DataList1;
+        protected global::System.Web.UI.WebControls.TextBox txtSearch;
+
     }
 }

@@ -762,5 +762,16 @@
             }
         </script>
     </body>
-
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MarFQjhQBviYq1HEv3c2r",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotid="MarFQjhQBviYq1HEv3c2r"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 </asp:Content>

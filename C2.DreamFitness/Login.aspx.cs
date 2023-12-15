@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 
 namespace C2.DreamFitness
 {
@@ -16,34 +19,48 @@ namespace C2.DreamFitness
         {
            
         }
-
         protected void Btn_login_Click(object sender, EventArgs e)
         {
             string tk = Login_email.Text.Trim().ToString();
             string mk = Login_password.Text.Trim().ToString();
-            if (tk == "dat@gmail.com" && mk == "123123")
-            {
-                Session["UserID"] = tk;
-                Response.Redirect("HomePage.aspx");
-            }
-            string sql = "select user_email,user_password from Users where user_email = '" + tk + "' and user_password = '" + mk + "'";
+            string mke = EncryptPassword(mk);
+            string sql = "select user_email,user_password from Users where user_email = '" + tk + "' and user_password = '" + mke + "'";
+            string sqlid = "select user_id from Users where user_email = '"+ tk + "'";
             DataTable dt = new DataTable();
             try
             {
                 dt = cn.docdulieu(sql);
             }
-            catch(SqlException ex) { Response.Write(ex.Message); }
+            catch (SqlException ex) { Response.Write(ex.Message); }
             if (dt != null && dt.Rows.Count > 0)
             {
-               // Response.Cookies["user_email"].Value = tk;
-                Session["UserID"] = tk;
+                var idget = cn.Scalar(sqlid);
+                string id = Convert.ToString(idget);
+                HttpCookie authCookie = new HttpCookie("AuthCookie");
+                authCookie.Values["Userid"] = id;
+                authCookie.Expires = DateTime.Now.AddDays(30); // Thời gian hết hạn của Cookie
+                // Thêm Cookie vào Response
+                Response.Cookies.Add(authCookie);
                 Response.Redirect("HomePage.aspx");
             }
             else
             {
-                lblErrorMessage.Text = "Tài Khoản Hoặc Mật Khẩu không hợp lệ";
+                lblErrorMessage.Text = "Email or password not correct";
                 lblErrorMessage.Visible = true;
-            }      
+            }
+        }
+        public static string EncryptPassword(string pass)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(pass));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in hashBytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString();
+            }
         }
     }
 }

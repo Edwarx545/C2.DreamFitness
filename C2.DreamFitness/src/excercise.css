@@ -19,8 +19,21 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Style the header */
-header {
+blockquote {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    text-align: center;
+}
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+    /* Style the header */
+    header {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -117,7 +130,7 @@ header {
 
 .search-control {
     padding: 0 1rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-family: inherit;
     outline: 0;
     border: 1px solid var(--tenne-tawny);
@@ -131,18 +144,19 @@ header {
     }
 
 .btnsearch1 {
-    background: var(--tenne-tawny);
-    padding: 0 5rem;
+    background-color: var(--tenne-tawny);
+    padding: 0 1rem;
     font-size: 1.4rem;
     font-family: inherit;
     outline: 0;
     border: 1px solid var(--tenne-tawny);
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
+
 }
 .btnSearch {
     width: 55px;
-    height: 35px;
+    height: 25px;
     font-size: 1.8rem;
     background: var(--tenne-tawny);
     color: #fff;
@@ -155,7 +169,6 @@ header {
     -ms-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
 }
-
     .btnSearch:hover {
         background: var(--tenne-tawny-dark);
     }

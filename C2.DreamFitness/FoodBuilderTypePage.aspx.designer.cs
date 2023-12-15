@@ -7,38 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace C2.DreamFitness.App_Start
+namespace C2.DreamFitness
 {
 
 
-    public partial class Findexercise
+    public partial class Food_Builder_Type
     {
 
         /// <summary>
-        /// txtSearch control.
+        /// btnPersonalWorkout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearch;
+        protected global::System.Web.UI.WebControls.LinkButton btnPersonalWorkout;
 
         /// <summary>
-        /// btnSearch control.
+        /// btnSystemWorkouts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
-
-        /// <summary>
-        /// DataList9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList9;
+        protected global::System.Web.UI.WebControls.LinkButton btnSystemWorkouts;
     }
 }

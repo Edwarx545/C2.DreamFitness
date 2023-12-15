@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,7 +18,6 @@ namespace C2.DreamFitness
         {
 
         }
-
         protected void btn_register_Onclick(object sender, EventArgs e)
         {
             string name = Register_name.Text.Trim().ToString();
@@ -24,10 +25,11 @@ namespace C2.DreamFitness
             string mk = Register_password.Text.Trim().ToString();
             string mkconfirm = Confirm_password.Text.Trim().ToString();
             string sqlcheck = "select user_email from Users where user_email = '" + tk + "'";
+            string mk1 = EncryptPassword(mk);
             DataTable dt = new DataTable();
             if (mk.Equals(mkconfirm))
             {
-                
+
                 try
                 {
                     dt = cn.docdulieu(sqlcheck);
@@ -40,7 +42,7 @@ namespace C2.DreamFitness
                 }
                 else
                 {
-                    string sqlthem = "Insert into Users values('" + name + "',01/01/2000,00000000,'" + tk + "','" + mk + "' )";                 
+                    string sqlthem = "Insert into Users values('" + name + "',01/01/2000,00000000,'" + tk + "','" + mk1 + "' )";
                     cn.ExecuteNonQuery(sqlthem);
                     lblErrorMessage1.Text = "Register successfull";
                     lblErrorMessage1.Visible = true;
@@ -52,7 +54,20 @@ namespace C2.DreamFitness
                 lblErrorMessage1.Text = "Confirm password not match with password";
                 lblErrorMessage1.Visible = true;
             }
-            
+        }
+
+        public static string EncryptPassword(string pass)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(pass));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in hashBytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString();
+            }
         }
     }
 }

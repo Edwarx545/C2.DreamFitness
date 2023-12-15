@@ -54,7 +54,7 @@
                 </div>
 
                 <div style="width: 300px">
-                    <asp:LinkButton ID="LinkButton1" runat="server" Style="text-decoration: none; color: #FFFFFF;">
+                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="FoodBuilderTypePage.aspx" Style="text-decoration: none; color: #FFFFFF;">
                             <div class="ps-3 pt-3 white-border" style="height: 300px;">
                                 <img src="img\icons8-diet-64.png" alt="" style="height: 40px; margin-bottom: 20px;">
                                 <p style="font-size: 25px; font-weight: bold;">Diet</p>
@@ -96,5 +96,17 @@
         </div>
         </div>
     </body>
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MarFQjhQBviYq1HEv3c2r",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotid="MarFQjhQBviYq1HEv3c2r"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 </asp:Content>
     
