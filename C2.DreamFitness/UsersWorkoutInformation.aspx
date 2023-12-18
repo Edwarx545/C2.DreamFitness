@@ -60,14 +60,14 @@
             border-radius: 10px;
         }
 
-        .schedule-table th, .schedule-table td {
-            text-align: center;
-        }
+            .schedule-table th, .schedule-table td {
+                text-align: center;
+            }
 
-        .schedule-table input[type="checkbox"] {
-            margin: 0;
-            vertical-align: middle;
-        }
+            .schedule-table input[type="checkbox"] {
+                margin: 0;
+                vertical-align: middle;
+            }
     </style>
 
     <body class="background">
@@ -210,4 +210,16 @@
             }
         </script>
     </body>
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MarFQjhQBviYq1HEv3c2r",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotid="MarFQjhQBviYq1HEv3c2r"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 </asp:Content>

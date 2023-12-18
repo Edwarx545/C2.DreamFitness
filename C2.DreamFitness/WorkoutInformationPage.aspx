@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WorkoutInformationPage.aspx.cs" Inherits="C2.DreamFitness.WorkoutInformationPage" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -67,7 +68,7 @@
                         </div>
                         <div class="d-flex" style="justify-content: start; margin-top: 20px;">
                             <button type="button" style="background-color: #36abb9; border: 1px solid #36abb9;" class="btn btn-primary">Add This Workout</button>
-                            <button type="button" style="margin-left:20px;background-color: #36abb9; border: 1px solid #36abb9;" class="btn btn-primary">Try This Workout Now!</button>
+                            <button type="button" style="margin-left: 20px; background-color: #36abb9; border: 1px solid #36abb9;" class="btn btn-primary">Try This Workout Now!</button>
                         </div>
                     </div>
                 </ItemTemplate>
@@ -98,5 +99,17 @@
 
         </div>
     </body>
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MarFQjhQBviYq1HEv3c2r",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotid="MarFQjhQBviYq1HEv3c2r"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 </asp:Content>
 

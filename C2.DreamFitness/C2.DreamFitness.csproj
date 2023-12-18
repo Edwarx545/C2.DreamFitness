@@ -116,7 +116,10 @@
     <Content Include="FailureView.aspx" />
     <Content Include="Findexercise.aspx" />
     <Content Include="Findfood.aspx" />
+    <Content Include="FoodBuilderTypePage.aspx" />
     <Content Include="FoodDetails.aspx" />
+    <Content Include="FoodInformationPage.aspx" />
+    <Content Include="FoodTemplateSelectionPage.aspx" />
     <Content Include="food\almond_cranberry_energy_bars_image.jpg" />
     <Content Include="food\apple_cinnamon_pancakes_image.jpg" />
     <Content Include="food\apple_slices_almond_butter_image.jpg" />
@@ -393,12 +396,33 @@
     <Compile Include="Findfood.aspx.designer.cs">
       <DependentUpon>Findfood.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FoodBuilderTypePage.aspx.cs">
+      <DependentUpon>FoodBuilderTypePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FoodBuilderTypePage.aspx.designer.cs">
+      <DependentUpon>FoodBuilderTypePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FoodDetails.aspx.cs">
       <DependentUpon>FoodDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FoodDetails.aspx.designer.cs">
       <DependentUpon>FoodDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FoodInformationPage.aspx.cs">
+      <DependentUpon>FoodInformationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FoodInformationPage.aspx.designer.cs">
+      <DependentUpon>FoodInformationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FoodTemplateSelectionPage.aspx.cs">
+      <DependentUpon>FoodTemplateSelectionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FoodTemplateSelectionPage.aspx.designer.cs">
+      <DependentUpon>FoodTemplateSelectionPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forgot.aspx.cs">
       <DependentUpon>Forgot.aspx</DependentUpon>
