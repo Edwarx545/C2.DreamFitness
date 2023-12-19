@@ -113,6 +113,7 @@
       <DependentUpon>CapstoneDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="CreatePersonalizedWorkoutPage.aspx" />
+    <Content Include="ExerciseDetails.aspx" />
     <Content Include="FailureView.aspx" />
     <Content Include="Findexercise.aspx" />
     <Content Include="Findfood.aspx" />
@@ -374,6 +375,13 @@
     </Compile>
     <Compile Include="CreatePersonalizedWorkoutPage.aspx.designer.cs">
       <DependentUpon>CreatePersonalizedWorkoutPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExerciseDetails.aspx.cs">
+      <DependentUpon>ExerciseDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExerciseDetails.aspx.designer.cs">
+      <DependentUpon>ExerciseDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="FailureView.aspx.cs">
       <DependentUpon>FailureView.aspx</DependentUpon>

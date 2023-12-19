@@ -12,7 +12,7 @@ namespace C2.DreamFitness
         SqlConnection cn;
         private void layketnoi()
         {
-            string sqlCon = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = " + Server.MapPath(" /App_Data/CapstoneDatabase.mdf") + "; Integrated Security = True"; 
+            string sqlCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + Server.MapPath("/App_Data/CapstoneDatabase.mdf") + ";Integrated Security=True";
             cn = new SqlConnection(sqlCon);
             cn.Open();
         }
@@ -79,10 +79,14 @@ namespace C2.DreamFitness
             }
             return kq;
         }
-
-        public SqlConnection getConnection()
+        public int Scalar(string sql)
         {
-            return cn;
+            layketnoi();
+            SqlCommand sqlcm = new SqlCommand(sql, cn);
+            int ketqua = (int)sqlcm.ExecuteScalar();
+            dongketnoi();
+            return ketqua;
         }
+
     }
 }

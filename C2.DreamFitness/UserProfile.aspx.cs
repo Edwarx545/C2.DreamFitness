@@ -3,10 +3,12 @@ using PayPal.Api;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -23,6 +25,42 @@ namespace C2.DreamFitness
             if (!IsPostBack)
             {
                 LoadUserData();
+
+            }
+            if (Request.QueryString["paymentId"] != null && Request.QueryString["token"] != null && Request.QueryString["PayerID"] != null)
+            {
+                // Retrieve parameters from the query string
+                string paymentId = Request.QueryString["paymentId"];
+                string token = Request.QueryString["token"];
+                string payerId = Request.QueryString["PayerID"];
+
+                try
+                {
+                    // Existing logic for executing payment
+                    var guid = Request.QueryString["guid"];
+                    var apiContext = PaypalConfiguration.GetAPIContext();
+                    var executedPayment = ExecutePayment(apiContext, payerId, paymentId);
+
+                    if (executedPayment.state.ToLower() == "approved")
+                    {
+                        UpdateUserPaidStatus(guid);
+                        Response.Redirect("SuccessView.aspx");
+
+                    }
+                    else
+                    {
+                        // If payment execution state is not approved, transfer to failure view
+                        Server.Transfer("FailureView.aspx");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Log the exception
+                    System.Diagnostics.Debug.WriteLine($"Exception: {ex.Message}");
+
+                    // If an exception occurs, transfer to failure view
+                    Server.Transfer("FailureView.aspx");
+                }
             }
         }
         private void LoadUserData()
@@ -107,17 +145,46 @@ namespace C2.DreamFitness
 
                 if (dt.Rows.Count > 0)
                 {
-                    // Password is correct, proceed with the update
-                    string hashedNewPassword = EncryptPassword(newPassword);
-                    string sqlUpdate = "UPDATE Users SET user_name = '" + updatedName + "', user_phone = '" + updatedPhone + "', user_birthday = '" + updatedBirthday + "', user_password = '" + hashedNewPassword + "' WHERE user_id = '" + userid + "'";
-                    ketnoi.CapNhat(sqlUpdate);
-
-                    // Reload user data
-                    LoadUserData();
-
-                    // Set success message
-                    lblErrorMessage.Text = "Update successful";
-                    lblErrorMessage.Visible = true;
+                    if (string.IsNullOrWhiteSpace(newPassword))
+                    {
+                        string sqlUpdate = "UPDATE Users SET user_name = '" + updatedName + "', user_phone = '" + updatedPhone + "', user_birthday = '" + updatedBirthday + "' WHERE user_id = '" + userid + "'";
+                        ketnoi.CapNhat(sqlUpdate);
+                        // Reload user data
+                        LoadUserData();
+                        // Set success message
+                        lblErrorMessage.Text = "Update successful";
+                        lblErrorMessage.Visible = true;
+                    }
+                    else
+                    {
+                        if (newPassword.Length < 8 && newPassword.Length > 0)
+                        {
+                            lblErrorMessage.Text = "Password must have at least 8 characters.";
+                            lblErrorMessage.Visible = true;
+                        }
+                        else if (!Regex.IsMatch(newPassword, "[A-Z]"))
+                        {
+                            lblErrorMessage.Text = "Password must have at least one capital letter.";
+                            lblErrorMessage.Visible = true;
+                        }
+                        else if (!Regex.IsMatch(newPassword, "[^a-zA-Z0-9]"))
+                        {
+                            lblErrorMessage.Text = "Password must have at least one special character.";
+                            lblErrorMessage.Visible = true;
+                        }
+                        // Password is correct, proceed with the update
+                        else
+                        {
+                            string hashedNewPassword = EncryptPassword(newPassword);
+                            string sqlUpdate = "UPDATE Users SET user_name = '" + updatedName + "', user_phone = '" + updatedPhone + "', user_birthday = '" + updatedBirthday + "', user_password = '" + hashedNewPassword + "' WHERE user_id = '" + userid + "'";
+                            ketnoi.CapNhat(sqlUpdate);
+                            // Reload user data
+                            LoadUserData();
+                            // Set success message
+                            lblErrorMessage.Text = "Update successful";
+                            lblErrorMessage.Visible = true;
+                        }
+                    }
                 }
                 else
                 {
@@ -156,16 +223,13 @@ namespace C2.DreamFitness
                     {
                         int selectedMonths = 0;
 
-                        // Find the first selected item in the CheckBoxList
                         ListItem selectedItem = chkSelectedMonths.Items.Cast<ListItem>().FirstOrDefault(item => item.Selected);
 
                         if (selectedItem != null)
                         {
-                            // Convert the selected value to an int
                             selectedMonths = Convert.ToInt32(selectedItem.Value);
                         }
 
-                        // Use selected value in CreatePayment
                         var createdPayment = this.CreatePayment(apiContext, baseURI + "guid=" + guid, selectedMonths);
 
                         var links = createdPayment.links.GetEnumerator();
@@ -180,49 +244,38 @@ namespace C2.DreamFitness
                             }
                         }
 
-                        // Print debug information
                         System.Diagnostics.Debug.WriteLine($"Redirecting to PayPal: {paypalRedirectUrl}");
 
-                        // Store payment ID in session
                         Session.Add(guid, createdPayment.id);
 
-                        // Redirect to PayPal for payment approval
-                        Response.Redirect(paypalRedirectUrl, false);
+                        Response.Redirect(paypalRedirectUrl);
                     }
                     else
                     {
-                        // Handle the case where the CheckBoxList is not found
                         System.Diagnostics.Debug.WriteLine("CheckBoxList not found.");
                     }
+
                 }
                 else
                 {
-                    // Existing logic for executing payment
                     var guid = Request.Params["guid"];
                     var executedPayment = ExecutePayment(apiContext, payerId, Session[guid] as string);
 
-                    if (executedPayment.state.ToLower() == "approved")
+                    if (executedPayment.state.ToLower() != "approved")
                     {
-                        // If payment execution state is approved, transfer to success view
-                        Server.Transfer("SuccessView.aspx");
-                        System.Threading.Thread.Sleep(5000);
-                    }
-                    else
-                    {
-                        // If payment execution state is not approved, transfer to failure view
                         Server.Transfer("FailureView.aspx");
                     }
                 }
+
             }
             catch (Exception ex)
             {
-                // Log the exception
-                System.Diagnostics.Debug.WriteLine($"Exception: {ex.Message}");
-
-                // If an exception occurs, transfer to failure view
                 Server.Transfer("FailureView.aspx");
             }
+            Response.Redirect("SuccessView.aspx");
         }
+
+
         // Add the FindControlRecursive function
         private Control FindControlRecursive(Control root, string id)
         {
@@ -243,7 +296,29 @@ namespace C2.DreamFitness
             return null;
         }
 
+        private void UpdateUserPaidStatus(string guid)
+        {
+            Connector ketnoi = new Connector();
+            string userid = Request.Cookies["authCookie"]["userid"];
+            string sqlUpdate = "UPDATE Users SET user_paid = 'Y' WHERE user_id = '" + userid + "'";
+            ketnoi.CapNhat(sqlUpdate);
+        }
+
+
         private PayPal.Api.Payment payment;
+        private Payment ExecutePayment(APIContext apiContext, string payerId, string paymentId)
+        {
+            var paymentExecution = new PaymentExecution()
+            {
+                payer_id = payerId
+            };
+            this.payment = new Payment()
+            {
+                id = paymentId
+            };
+            return this.payment.Execute(apiContext, paymentExecution);
+
+        }
         private Payment CreatePayment(APIContext apiContext, string redirectUrl, int selectedMonths)
         {
             try
@@ -338,19 +413,6 @@ namespace C2.DreamFitness
                 System.Diagnostics.Debug.WriteLine($"Exception during payment creation: {ex.Message}");
                 throw; // Re-throw the exception to propagate it to the calling code
             }
-        }
-        private Payment ExecutePayment(APIContext apiContext, string payerId, string paymentId)
-        {
-            var paymentExecution = new PaymentExecution()
-            {
-                payer_id = payerId
-            };
-            this.payment = new Payment()
-            {
-                id = paymentId
-            };
-            return this.payment.Execute(apiContext, paymentExecution);
-
         }
     }
 }

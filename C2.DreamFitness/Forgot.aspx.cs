@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,11 +19,11 @@ namespace C2.DreamFitness
         {
 
         }
-
         protected void Btn_Reset(object sender, EventArgs e)
         {
             string tk = Forgot_email.Text.Trim().ToString();
             string mk = Forgot_password.Text.Trim().ToString();
+            string mkx = EncryptPassword(mk);
             string sqlcheck1 = "select user_email from Users where user_email = '" + tk + "'";
             DataTable dt = new DataTable();
             try
@@ -28,17 +31,55 @@ namespace C2.DreamFitness
                 dt = cn.docdulieu(sqlcheck1);
             }
             catch (SqlException ex) { Response.Write(ex.Message); }
-            if(dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0)
             {
-                string sqlupdate = "update Users set user_password= '" + mk + "' where user_email = '" + tk + "' ";
-                cn.ExecuteNonQuery(sqlupdate);
-                lblErrorMessage2.Text = "Reset Password successfull.";
-                lblErrorMessage2.Visible = true;
+                if (IsValidPassword(mk))
+                {
+                    string sqlupdate = "update Users set user_password= '" + mkx + "' where user_email = '" + tk + "' ";
+                    cn.ExecuteNonQuery(sqlupdate);
+                    lblErrorMessage2.Text = "Reset Password successfull.";
+                    lblErrorMessage2.Visible = true;
+                }
             }
             else
             {
                 lblErrorMessage2.Text = "This Email not exit. Try another Email";
                 lblErrorMessage2.Visible = true;
+            }
+        }
+        protected bool IsValidPassword(string password)
+        {
+            if (password.Length < 8)
+            {
+                lblErrorMessage2.Text = "Password must have at least 8 characters.";
+                lblErrorMessage2.Visible = true;
+                return false;
+            }
+            if (!Regex.IsMatch(password, "[A-Z]"))
+            {
+                lblErrorMessage2.Text = "Password must have at least one capital letter.";
+                lblErrorMessage2.Visible = true;
+                return false;
+            }
+            if (!Regex.IsMatch(password, "[^a-zA-Z0-9]"))
+            {
+                lblErrorMessage2.Text = "Password must have at least one special character.";
+                lblErrorMessage2.Visible = true;
+                return false;
+            }
+            return true;
+        }
+        public static string EncryptPassword(string pass)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(pass));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in hashBytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString();
             }
         }
     }

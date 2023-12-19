@@ -17,8 +17,10 @@ namespace C2.DreamFitness.App_Start
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //if (!IsPostBack) return;
-            BindExerciseData();
+            if (!IsPostBack)
+            {
+                BindExerciseData();
+            }
         }
         private void BindExerciseData()
         {

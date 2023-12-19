@@ -133,7 +133,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">E-mail</label>
-                                        <asp:TextBox ID="tbemail" runat="server" CssClass="form-control mb-1" Text='<%# Bind("user_email") %>'></asp:TextBox>
+                                        <asp:Label ID="tbemail" runat="server" CssClass="form-control mb-1" Text='<%# Bind("user_email") %>'></asp:Label>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Birthday</label>
@@ -143,7 +143,7 @@
                                     <div class="form-group">
                                         <label class="form-label">Phone</label>
                                         <asp:TextBox ID="btphone" runat="server" CssClass="form-control" Text='<%# Bind("user_phone") %>'></asp:TextBox>
-                                    </div>
+                                    </div>  
                                     <div class="form-group">
                                         <label class="form-label">Current password</label>
                                         <asp:TextBox ID="btcurrentpassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
