@@ -10,13 +10,10 @@ namespace C2.DreamFitness
     public partial class FoodInformationPage : System.Web.UI.Page
     {
         Connector ketnoi = new Connector();
-        string dietId;
+        public static string dietId;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack) return;
-
-            dietId = Context.Items["DietId"] + "";
-
+            dietId = Request.QueryString["dietId"];
             string sql = "select * from DietTemplate where DietId='" + dietId + "'";
             DataList1.DataSource = ketnoi.docdulieu(sql);
             DataList1.DataBind();
@@ -109,9 +106,9 @@ namespace C2.DreamFitness
 
         protected void Label1_Click(object sender, EventArgs e)
         {
-            string foodID = ((LinkButton)sender).CommandArgument.ToString();
+            string foodID = ((LinkButton)sender).CommandArgument;
             Context.Items["food_item_id"] = foodID;
-            Response.Redirect("FoodDetails.aspx");
+            Server.Transfer("FoodDetails.aspx");
         }
 
         protected void Label4_Click(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace C2.DreamFitness
             DataList1.DataSource = ketnoi.docdulieu(sql);
             DataList1.DataBind();
 
-            string sqlForExercise = "select distinct exercise_name, exercise_desc, exercise_img from WorkoutTemplateExercise wte join Exercise e on wte.exercise_id=e.exercise_id where wte.workout_template_id = " + workoutId;
+            string sqlForExercise = "select distinct e.exercise_id, exercise_name, exercise_desc, exercise_img from WorkoutTemplateExercise wte join Exercise e on wte.exercise_id=e.exercise_id where wte.workout_template_id = " + workoutId;
             DataList2.DataSource = ketnoi.docdulieu(sqlForExercise);
             DataList2.DataBind();
         }
@@ -131,6 +131,12 @@ namespace C2.DreamFitness
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
 
+        }
+        protected void btn_ThongTinExercise1(object sender, EventArgs e)
+        {
+            string exerciseID = ((LinkButton)sender).CommandArgument;
+            Context.Items["exercise_id"] = exerciseID;
+            Server.Transfer("ExerciseDetails.aspx");
         }
     }
 }

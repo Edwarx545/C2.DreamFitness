@@ -20,9 +20,9 @@ namespace C2.DreamFitness
         }
         protected void btnXemThongTin_Click(object sender, EventArgs e)
         {
-            string workoutId = ((LinkButton)sender).CommandArgument.ToString();
-            Context.Items["DietId"] = workoutId;
-            Server.Transfer("FoodInformationPage.aspx");
+            string dietId = ((LinkButton)sender).CommandArgument.ToString();
+            Session["DietId"] = dietId;
+            Response.Redirect($"FoodInformationPage.aspx?dietId={dietId}");
         }
     }
 }
