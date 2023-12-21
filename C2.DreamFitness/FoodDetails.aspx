@@ -28,10 +28,10 @@
         }
 
         .exercise-image {
-            max-width: 100%; 
-            max-height: 600px; 
+            max-width: 100%;
+            max-height: 600px;
             display: block;
-            margin-left: auto; 
+            margin-left: auto;
             margin-right: auto;
         }
 
@@ -40,7 +40,7 @@
             margin-top: 10px;
             margin-left: 50px;
             margin-right: 70px;
-            text-align: left; 
+            text-align: left;
         }
     </style>
     <body>
@@ -67,8 +67,8 @@
             </asp:DataList>
             <asp:DataList ID="DataList2" runat="server" CssClass="Catego" CellPadding="0" CellSpacing="0">
                 <ItemTemplate>
-                        <asp:Label ID="Label1" runat="server" Style="font-size: 30px; width: 1255px; display: flex; flex-direction: column; text-align: center; align-items: center;"
-                            Text='<%# Eval("recipe_name") %>'></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Style="font-size: 30px; width: 1255px; display: flex; flex-direction: column; text-align: center; align-items: center;"
+                        Text='<%# Eval("recipe_name") %>'></asp:Label>
                     <div class="exercise-container">
                         <asp:Label ID="Label6" class="exercise-label" runat="server" Text='<%# "Recipe description: " + Eval("recipe_desc") %>'></asp:Label>
                         <asp:Label ID="Label8" class="exercise-label" runat="server" Text='<%# "Recipe type: " + Eval("recipe_type") %>'></asp:Label>
@@ -80,4 +80,16 @@
             </asp:DataList>
         </div>
     </body>
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MarFQjhQBviYq1HEv3c2r",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotid="MarFQjhQBviYq1HEv3c2r"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 </asp:Content>

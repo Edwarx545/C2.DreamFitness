@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -23,12 +24,14 @@ namespace C2.DreamFitness
         {
             string tk = Login_email.Text.Trim().ToString();
             string mk = Login_password.Text.Trim().ToString();
+            string mkecrypt = EncryptPassword(mk);
             if (tk == "dat@gmail.com" && mk == "123123")
             {
                 Session["UserID"] = tk;
                 Response.Redirect("HomePage.aspx");
             }
-            string sql = "select user_email,user_password from Users where user_email = '" + tk + "' and user_password = '" + mk + "'";
+            string sql = "select user_email,user_password from Users where user_email = '" + tk + "' and user_password = '" + mkecrypt + "'";
+            string sqlid = "select user_id from Users where user_email = '" + tk + "'";
             DataTable dt = new DataTable();
             try
             {
@@ -37,13 +40,18 @@ namespace C2.DreamFitness
             catch(SqlException ex) { Response.Write(ex.Message); }
             if (dt != null && dt.Rows.Count > 0)
             {
-               // Response.Cookies["user_email"].Value = tk;
-                Session["UserID"] = tk;
+                var idget = cn.Scalar(sqlid);
+                string id = Convert.ToString(idget);
+                HttpCookie authCookie = new HttpCookie("AuthCookie");
+                authCookie.Values["Userid"] = id;
+                authCookie.Expires = DateTime.Now.AddDays(30); // Thời gian hết hạn của Cookie
+                // Thêm Cookie vào Response
+                Response.Cookies.Add(authCookie);
                 Response.Redirect("HomePage.aspx");
             }
             else
             {
-                lblErrorMessage.Text = "Tài Khoản Hoặc Mật Khẩu không hợp lệ";
+                lblErrorMessage.Text = "Email or password not correct";
                 lblErrorMessage.Visible = true;
             }      
         }

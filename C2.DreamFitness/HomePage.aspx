@@ -1,38 +1,39 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="C2.DreamFitness.App_Start.HomePage" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <body>
-    <!-- front page -->
-            <div class="container mt-5">
-                <div class="row align-items-center">
-                    <div class="col-6">
-                        <h1 style="font-weight: bold;">Get your ideal body.</h1>
-                        <h1 style="font-weight: bold;">Be your best version.</h1>
-                        <p style="color: gray; margin-top: 20px;">
-                            Introducing Dream Fitness, the ultimate wellness solution that
+        <!-- front page -->
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <h1 style="font-weight: bold;">Get your ideal body.</h1>
+                    <h1 style="font-weight: bold;">Be your best version.</h1>
+                    <p style="color: gray; margin-top: 20px;">
+                        Introducing Dream Fitness, the ultimate wellness solution that
           seamlessly combines
           personalized workouts, adaptable schedules, progress tracking, tailored diet plans, and an insightful health
           chatbot, all designed to help you achieve your fitness aspirations and lead a healthier, happier life.
-                        </p>
-                        <div class="d-flex text-center align-items-center mt-5">
-                            <div>
-                                <button class="btn btn-primary me-5" type="submit">Start Traning</button>
-                            </div>
-                            <div>
-                                <img src="img\play_btn.png" alt="play_btn" style="height: 38px; margin-right: 10px;">Watch Demo
-                            </div>
+                    </p>
+                    <div class="d-flex text-center align-items-center mt-5">
+                        <div>
+                            <button class="btn btn-primary me-5" type="submit">Start Traning</button>
+                        </div>
+                        <div>
+                            <img src="img\play_btn.png" alt="play_btn" style="height: 38px; margin-right: 10px;">Watch Demo
                         </div>
                     </div>
-                    <div class="col-6 text-center">
-                        <img src="img\woman-helping-man-gym.jpg" alt="" width="600px">
-                    </div>
+                </div>
+                <div class="col-6 text-center">
+                    <img src="img\woman-helping-man-gym.jpg" alt="" width="600px">
                 </div>
             </div>
+        </div>
 
-            <!-- explore our program -->
-            <div>
+        <!-- explore our program -->
+        <div>
             <div class="container d-flex justify-content-between mt-5">
                 <div>
                     <h1 style="font-weight: bold;">Explore Our Program</h1>
@@ -54,7 +55,7 @@
                 </div>
 
                 <div style="width: 300px">
-                    <asp:LinkButton ID="LinkButton1" runat="server" Style="text-decoration: none; color: #FFFFFF;">
+                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="FoodBuilderTypePage.aspx" Style="text-decoration: none; color: #FFFFFF;">
                             <div class="ps-3 pt-3 white-border" style="height: 300px;">
                                 <img src="img\icons8-diet-64.png" alt="" style="height: 40px; margin-bottom: 20px;">
                                 <p style="font-size: 25px; font-weight: bold;">Diet</p>
@@ -96,5 +97,16 @@
         </div>
         </div>
     </body>
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MarFQjhQBviYq1HEv3c2r",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotid="MarFQjhQBviYq1HEv3c2r"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 </asp:Content>
-    

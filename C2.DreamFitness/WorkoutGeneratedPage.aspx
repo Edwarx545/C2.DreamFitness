@@ -73,9 +73,9 @@
             margin-bottom: 10px;
         }
 
-        .input-with-placeholder::placeholder {
-            color: #aaa;
-        }
+            .input-with-placeholder::placeholder {
+                color: #aaa;
+            }
 
         .description {
             width: 700px; /* Adjust the width as needed */
@@ -93,9 +93,9 @@
             cursor: pointer;
         }
 
-        .dark-mode-button:hover {
-            background-color: #555;
-        }
+            .dark-mode-button:hover {
+                background-color: #555;
+            }
     </style>
     <body class="background">
         <div class="container" style="margin-top: 50px;">
@@ -185,4 +185,16 @@
             }
         </script>
     </body>
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MarFQjhQBviYq1HEv3c2r",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotid="MarFQjhQBviYq1HEv3c2r"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 </asp:Content>

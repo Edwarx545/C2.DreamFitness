@@ -14,11 +14,14 @@ namespace C2.DreamFitness.App_Start
     public partial class Findfood : System.Web.UI.Page
     {
         Connector ketnoi = new Connector();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            //if (!IsPostBack) return;
-            BindExerciseData();
+            if (!IsPostBack)
+            {
+                BindExerciseData();
+            }
         }
         private void BindExerciseData()
         {

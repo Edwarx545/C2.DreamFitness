@@ -79,10 +79,14 @@ namespace C2.DreamFitness
             }
             return kq;
         }
-
-        public SqlConnection getConnection()
+        public int Scalar(string sql)
         {
-            return cn;
+            layketnoi();
+            SqlCommand sqlcm = new SqlCommand(sql, cn);
+            int ketqua = (int)sqlcm.ExecuteScalar();
+            dongketnoi();
+            return ketqua;
         }
+
     }
 }

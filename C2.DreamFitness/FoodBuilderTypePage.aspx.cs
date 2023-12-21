@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace C2.DreamFitness
 {
-    public partial class Workout_Builder_Type : System.Web.UI.Page
+    public partial class Food_Builder_Type : System.Web.UI.Page
     {
         private string userid;
         Connector ketnoi = new Connector();
@@ -20,7 +20,7 @@ namespace C2.DreamFitness
             if (userData.Rows.Count > 0)
             {
 
-            }
+            }   
             else
             {
                 Response.Redirect("HomePage.aspx");
@@ -30,12 +30,11 @@ namespace C2.DreamFitness
         }
         protected void navigateToWorkoutTemplateSelectionPage(object sender, EventArgs e)
         {
-            Server.Transfer("WorkoutTemplateSelectionPage.aspx");
+            Server.Transfer("FoodTemplateSelectionPage.aspx");
         }
-
         protected void navigateToCreatePersonalizedWorkoutPage(object sender, EventArgs e)
         {
-            Server.Transfer("CreatePersonalizedWorkoutPage.aspx");
+            Server.Transfer(" ");
         }
         private string GetUserIdFromSession()
         {

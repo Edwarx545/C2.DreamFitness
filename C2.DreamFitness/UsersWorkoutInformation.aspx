@@ -60,21 +60,21 @@
             border-radius: 10px;
         }
 
-        .schedule-table th, .schedule-table td {
-            text-align: center;
-        }
+            .schedule-table th, .schedule-table td {
+                text-align: center;
+            }
 
-        .schedule-table input[type="checkbox"] {
-            margin: 0;
-            vertical-align: middle;
-        }
+            .schedule-table input[type="checkbox"] {
+                margin: 0;
+                vertical-align: middle;
+            }
     </style>
 
     <body class="background">
         <div class="container" style="margin-top: 50px;">
             <asp:DataList ID="DataList1" runat="server" Class="Catego" CellPadding="0" CellSpacing="0">
                 <ItemTemplate>
-                    <asp:Label ID="Label7" runat="server" Text='<%# Eval("workout_template_name") %>' CssClass="workout-name"></asp:Label>
+                    <asp:Label ID="Label7" runat="server" Text='<%# Eval("workout_template_name") %>' CssClass="workout-name" ></asp:Label>
                     <div style="margin-top: 20px;">
                         <div class="" style="width: 1000px;">
                             <p style="font-weight: bold;">Description:&nbsp; </p>
@@ -179,7 +179,7 @@
                             <div class="exercise" style="width: 700px;">
                                 <div style="margin-left: 10px;">
                                     <div style="display: flex; justify-content: center;">
-                                        <asp:LinkButton ID="Label1" runat="server" Text='<%# Eval("exercise_name") %>' CssClass=" exercise-name"></asp:LinkButton>
+                                        <asp:LinkButton ID="exerciseid" runat="server" Text='<%# Eval("exercise_name") %>' CssClass="exercise-name" OnClick="btn_ThongTinExercise1" CommandArgument='<%# Eval("exercise_id") %>'></asp:LinkButton>
                                     </div>
 
                                     <div class="">
@@ -210,4 +210,16 @@
             }
         </script>
     </body>
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MarFQjhQBviYq1HEv3c2r",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotid="MarFQjhQBviYq1HEv3c2r"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 </asp:Content>

@@ -20,6 +20,7 @@ namespace C2.DreamFitness
         public string gender;
         public static string fitnessLevel;
         public string userId;
+        string userid;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack) return;
@@ -266,11 +267,18 @@ namespace C2.DreamFitness
             return rep;
         }
 
+        private string GetUserIdFromSession()
+        {
+            if (Request.Cookies["AuthCookie"] != null)
+            {
+                return userid = Request.Cookies["authCookie"]["userid"];
+            }
+            return null;
+        }
         protected void SaveWorkout(object sender, EventArgs e)
         {
             exercises = Exercises;
-
-            userId = "1";
+            userId = GetUserIdFromSession();
             if (title.Text.Length < 10)
             {
                 errorMessage.Visible = true;

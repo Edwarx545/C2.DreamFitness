@@ -30,7 +30,7 @@ namespace C2.DreamFitness
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbemail;
+        protected global::System.Web.UI.WebControls.Label tbemail;
 
         /// <summary>
         /// TextBoxBirthday control.

@@ -5,66 +5,68 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <body>
         <style>
-               .btnsearch1 {
-    background-image: url('img/searchicon.png');
-    background-size: 70% 70%;
-    background-repeat: no-repeat; 
-    background-position: center;
-    text-align: center;
-    text-decoration: none;
-    background-color: #0d6efd;
-    padding: 0.5rem 1.5rem; 
-    font-size: 1rem; 
-    font-family: inherit;
-    outline: 0;
-    border: 1px solid #0d6efd;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    transition: all 0.4s linear;
-    }
+            .btnsearch1 {
+                background-image: url('img/searchicon.png');
+                background-size: 70% 70%;
+                background-repeat: no-repeat;
+                background-position: center;
+                text-align: center;
+                text-decoration: none;
+                background-color: #0d6efd;
+                padding: 0.5rem 1.5rem;
+                font-size: 1rem;
+                font-family: inherit;
+                outline: 0;
+                border: 1px solid #0d6efd;
+                border-top-right-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+                transition: all 0.4s linear;
+            }
 
-    .intrott {
-        text-align: center;
-    }
+            .intrott {
+                text-align: center;
+            }
 
-    .meal-search-box {
-        width: 100%;
-        max-width: 600px; 
-        margin: 0 auto;
-        display: flex;
-        color: black;
-    }
+            .meal-search-box {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                display: flex;
+                color: black;
+            }
 
-    .search-control {
-        padding: 0.5rem 1rem; 
-        font-size: 0.9rem; 
-        font-family: inherit;
-        outline: 0;
-        border: 1px solid #0d6efd;
-        flex: 1;
-        border-top-left-radius: 2rem;
-        border-bottom-left-radius: 2rem;
-    }
+            .search-control {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+                font-family: inherit;
+                outline: 0;
+                border: 1px solid #0d6efd;
+                flex: 1;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+            }
 
-    .search-control::placeholder {
-        color: var(--tenne-tawny);
-    }
-    .search-control::placeholder {
-    color: #0d6efd;
-}
-    .section-title {
-    text-align: center;
-    font-size: 140px;
-    display: block;
-    color: #2c234d;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
-    -webkit-text-stroke: 1px #f6f7f8;
-    -webkit-text-fill-color: transparent;
-}
+                .search-control::placeholder {
+                    color: var(--tenne-tawny);
+                }
+
+                .search-control::placeholder {
+                    color: #0d6efd;
+                }
+
+            .section-title {
+                text-align: center;
+                font-size: 140px;
+                display: block;
+                color: #2c234d;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #fff;
+                -webkit-text-stroke: 1px #f6f7f8;
+                -webkit-text-fill-color: transparent;
+            }
         </style>
-        
+
         <div class="blog-sec">
             <h1 class="section-title">Excercise</h1>
             <div class="meal-search-box">
@@ -82,7 +84,7 @@
                             <p></p>
                             <asp:Label ID="Label2" runat="server" class="" Text='<%# "Age: " + Eval("exercise_age") %>'> </asp:Label>
                             <p></p>
-<%--                            <asp:Label ID="Label4" runat="server" class="" Text='<%# "Muscle Group: " + Eval("muscle_group_name") %>'> </asp:Label>
+                            <%--                            <asp:Label ID="Label4" runat="server" class="" Text='<%# "Muscle Group: " + Eval("muscle_group_name") %>'> </asp:Label>
                             <p></p>--%>
                         </div>
                     </ItemTemplate>
@@ -90,4 +92,16 @@
             </div>
         </div>
     </body>
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "MarFQjhQBviYq1HEv3c2r",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotid="MarFQjhQBviYq1HEv3c2r"
+        domain="www.chatbase.co"
+        defer>
+    </script>
 </asp:Content>
