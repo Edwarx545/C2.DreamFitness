@@ -33,7 +33,7 @@
                  <div class="d-flex" style="text-align: left; height: 200px;width: 1500px; color: white; margin-top: 100px;">
                     <div class="workout-image child">
                         <a href="">
-                            <img src="img/planking1.png" alt="" style="border-radius: 10px;">
+                            <img src='<%# Eval("workout_template_img") %>' alt="" style="border-radius: 10px;" />
                         </a>
                     </div>
                     <div class="child" style="width: 800px; margin-left: 50px;">
