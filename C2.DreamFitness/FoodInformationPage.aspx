@@ -101,7 +101,7 @@
             font-weight:200;
         }
     </style>
-    <body>
+    <body class="background">
         <table>
             <tr>
                 <th style="vertical-align: top;">

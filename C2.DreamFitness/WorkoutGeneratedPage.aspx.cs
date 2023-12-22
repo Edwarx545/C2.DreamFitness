@@ -64,7 +64,7 @@ namespace C2.DreamFitness
             bindData();
 
             errorMessage.Visible = false;
-            Label2.Visible = true;
+            Label2.Visible = false;
             Label2.Text = muscleGroups.Length + "";
         }
 

@@ -187,7 +187,7 @@
                                         <asp:Label ID="Label9" runat="server" Text='<%# Eval("exercise_desc") %>'></asp:Label>
                                     </div>
                                 </div>
-                                <asp:Image ID="Image1" runat="server" ImageUrl='<%# "img/"+Eval("exercise_img")  %>' CssClass=" workout-image ex-img" />
+                                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("exercise_img")  %>' CssClass=" workout-image ex-img" />
                             </div>
                         </div>
                     </ItemTemplate>

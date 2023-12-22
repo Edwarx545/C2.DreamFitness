@@ -25,6 +25,8 @@ namespace C2.DreamFitness
             weight = hfWeight.Value.Trim();
             gender = hfGender.Value.Trim();
             fitnessLevel = hfLevel.Value.Trim();
+
+            Label1.Visible = false;
         }
 
         protected void go(object sender, EventArgs e)
