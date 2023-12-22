@@ -684,7 +684,7 @@
                         <asp:HiddenField ID="hfLevel" runat="server" />
                     </div>
                     <div>
-                        <asp:Label ID="Label1" runat="server" Text="Label" EnableViewState="true">text</asp:Label>
+                        <asp:Label ID="Label1" runat="server" EnableViewState="true">text</asp:Label>
                     </div>
                     <div>
                         <asp:Label ID="errorMessage" runat="server" Text="Please Check Your Input Again!"></asp:Label>

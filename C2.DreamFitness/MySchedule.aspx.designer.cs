@@ -24,15 +24,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label monday_morning_workout;
 
         /// <summary>
-        /// monday_morning_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label monday_morning_diet;
-
-        /// <summary>
         /// monday_afternoon_workout control.
         /// </summary>
         /// <remarks>
@@ -40,15 +31,6 @@ namespace C2.DreamFitness
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label monday_afternoon_workout;
-
-        /// <summary>
-        /// monday_afternoon_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label monday_afternoon_diet;
 
         /// <summary>
         /// monday_evening_workout control.
@@ -60,15 +42,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label monday_evening_workout;
 
         /// <summary>
-        /// monday_evening_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label monday_evening_diet;
-
-        /// <summary>
         /// tuesday_morning_workout control.
         /// </summary>
         /// <remarks>
@@ -76,15 +49,6 @@ namespace C2.DreamFitness
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label tuesday_morning_workout;
-
-        /// <summary>
-        /// tuesday_morning_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label tuesday_morning_diet;
 
         /// <summary>
         /// tuesday_afternoon_workout control.
@@ -96,15 +60,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label tuesday_afternoon_workout;
 
         /// <summary>
-        /// tuesday_afternoon_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label tuesday_afternoon_diet;
-
-        /// <summary>
         /// tuesday_evening_workout control.
         /// </summary>
         /// <remarks>
@@ -112,15 +67,6 @@ namespace C2.DreamFitness
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label tuesday_evening_workout;
-
-        /// <summary>
-        /// tuesday_evening_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label tuesday_evening_diet;
 
         /// <summary>
         /// wednesday_morning_workout control.
@@ -132,15 +78,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label wednesday_morning_workout;
 
         /// <summary>
-        /// wednesday_morning_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label wednesday_morning_diet;
-
-        /// <summary>
         /// wednesday_afternoon_workout control.
         /// </summary>
         /// <remarks>
@@ -148,15 +85,6 @@ namespace C2.DreamFitness
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label wednesday_afternoon_workout;
-
-        /// <summary>
-        /// wednesday_afternoon_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label wednesday_afternoon_diet;
 
         /// <summary>
         /// wednesday_evening_workout control.
@@ -168,15 +96,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label wednesday_evening_workout;
 
         /// <summary>
-        /// wednesday_evening_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label wednesday_evening_diet;
-
-        /// <summary>
         /// thursday_morning_workout control.
         /// </summary>
         /// <remarks>
@@ -184,15 +103,6 @@ namespace C2.DreamFitness
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label thursday_morning_workout;
-
-        /// <summary>
-        /// thursday_morning_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label thursday_morning_diet;
 
         /// <summary>
         /// thursday_afternoon_workout control.
@@ -204,15 +114,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label thursday_afternoon_workout;
 
         /// <summary>
-        /// thursday_afternoon_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label thursday_afternoon_diet;
-
-        /// <summary>
         /// thursday_evening_workout control.
         /// </summary>
         /// <remarks>
@@ -220,15 +121,6 @@ namespace C2.DreamFitness
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label thursday_evening_workout;
-
-        /// <summary>
-        /// thursday_evening_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label thursday_evening_diet;
 
         /// <summary>
         /// friday_morning_workout control.
@@ -240,15 +132,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label friday_morning_workout;
 
         /// <summary>
-        /// friday_morning_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label friday_morning_diet;
-
-        /// <summary>
         /// friday_afternoon_workout control.
         /// </summary>
         /// <remarks>
@@ -256,15 +139,6 @@ namespace C2.DreamFitness
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label friday_afternoon_workout;
-
-        /// <summary>
-        /// friday_afternoon_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label friday_afternoon_diet;
 
         /// <summary>
         /// friday_evening_workout control.
@@ -276,15 +150,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label friday_evening_workout;
 
         /// <summary>
-        /// friday_evening_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label friday_evening_diet;
-
-        /// <summary>
         /// saturday_morning_workout control.
         /// </summary>
         /// <remarks>
@@ -292,15 +157,6 @@ namespace C2.DreamFitness
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label saturday_morning_workout;
-
-        /// <summary>
-        /// saturday_morning_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label saturday_morning_diet;
 
         /// <summary>
         /// saturday_afternoon_workout control.
@@ -312,15 +168,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label saturday_afternoon_workout;
 
         /// <summary>
-        /// saturday_afternoon_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label saturday_afternoon_diet;
-
-        /// <summary>
         /// saturday_evening_workout control.
         /// </summary>
         /// <remarks>
@@ -328,15 +175,6 @@ namespace C2.DreamFitness
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label saturday_evening_workout;
-
-        /// <summary>
-        /// saturday_evening_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label saturday_evening_diet;
 
         /// <summary>
         /// sunday_morning_workout control.
@@ -348,15 +186,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label sunday_morning_workout;
 
         /// <summary>
-        /// sunday_morning_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label sunday_morning_diet;
-
-        /// <summary>
         /// sunday_afternoon_workout control.
         /// </summary>
         /// <remarks>
@@ -366,15 +195,6 @@ namespace C2.DreamFitness
         protected global::System.Web.UI.WebControls.Label sunday_afternoon_workout;
 
         /// <summary>
-        /// sunday_afternoon_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label sunday_afternoon_diet;
-
-        /// <summary>
         /// sunday_evening_workout control.
         /// </summary>
         /// <remarks>
@@ -382,14 +202,5 @@ namespace C2.DreamFitness
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label sunday_evening_workout;
-
-        /// <summary>
-        /// sunday_evening_diet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label sunday_evening_diet;
     }
 }

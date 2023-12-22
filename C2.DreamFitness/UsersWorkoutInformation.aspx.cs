@@ -11,7 +11,7 @@ namespace C2.DreamFitness
     {
         Connector ketnoi = new Connector();
         public static string workoutId;
-        public static string userId;
+        public static string userid;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack) return;
@@ -58,11 +58,11 @@ namespace C2.DreamFitness
             string sundayAfternoonChecked = SundayAfternoon.Checked ? workoutId : "";
             string sundayEveningChecked = SundayEvening.Checked ? workoutId : "";
 
-            userId = "1";
+            userid = GetUserIdFromSession();
             string mergeQuery = $@"
     MERGE INTO [dbo].[UserSchedule] AS target
     USING (VALUES 
-        ({userId}, N'workout', 
+        ({userid}, N'workout', 
         '{mondayMorningChecked}', '{mondayAfternoonChecked}', '{mondayEveningChecked}', 
         '{tuesdayMorningChecked}', '{tuesdayAfternoonChecked}', '{tuesdayEveningChecked}', 
         '{wednesdayMorningChecked}', '{wednesdayAfternoonChecked}', '{wednesdayEveningChecked}', 
@@ -137,6 +137,15 @@ namespace C2.DreamFitness
             string exerciseID = ((LinkButton)sender).CommandArgument;
             Context.Items["exercise_id"] = exerciseID;
             Server.Transfer("ExerciseDetails.aspx");
+        }
+
+        private string GetUserIdFromSession()
+        {
+            if (Request.Cookies["AuthCookie"] != null)
+            {
+                return userid = Request.Cookies["authCookie"]["userid"];
+            }
+            return null;
         }
     }
 }

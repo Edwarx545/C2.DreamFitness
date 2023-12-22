@@ -32,22 +32,6 @@
         }
     </style>
     <body class="background">
-<<<<<<< HEAD
-    <div class="container">
-        <asp:DataList ID="DataList1" runat="server" RepeatColumns="1" RepeatDirection="Vertical">
-            <ItemTemplate>
-                 <div class="d-flex" style="text-align: left; height: 200px;width: 1500px; color: white; margin-top: 100px;">
-                    <div class="workout-image child">
-                        <a href="">
-                            <img src='<%# Eval("workout_template_img") %>' alt="" style="border-radius: 10px;" />
-                        </a>
-                    </div>
-                    <div class="child" style="width: 800px; margin-left: 50px;">
-                        <asp:LinkButton ID="workoutName" runat="server" OnClick="btnXemThongTin_Click" Text='<%# Eval("workout_template_name") %>' CommandArgument='<%# Eval("workout_template_id") %>' CssClass="blueText link-button" Font-Size="20"></asp:LinkButton>
-                        <div class="d-flex rating mt-3">
-                            <p style="text-align: center; margin-right:10px">Difficulty:&nbsp;</p>
-                            <asp:Label ID="Label6" runat="server" Text='<%# Eval("workout_template_difficulty") %>'></asp:Label>
-=======
         <div class="container">
             <asp:DataList ID="DataList1" runat="server" RepeatColumns="1" RepeatDirection="Vertical">
                 <ItemTemplate>
@@ -56,7 +40,6 @@
                             <a href="">
                                 <img src="img/planking1.png" alt="" style="border-radius: 10px;">
                             </a>
->>>>>>> a4ca79adb1b845756e9a9513031e024d8751102c
                         </div>
                         <div class="child" style="width: 800px; margin-left: 50px;">
                             <asp:LinkButton ID="workoutName" runat="server" OnClick="btnXemThongTin_Click" Text='<%# Eval("workout_template_name") %>' CommandArgument='<%# Eval("workout_template_id") %>' CssClass="blueText link-button" Font-Size="20"></asp:LinkButton>

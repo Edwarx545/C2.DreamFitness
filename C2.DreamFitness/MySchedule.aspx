@@ -24,6 +24,10 @@
             padding: 10px;
             border-radius: 5px;
             margin-right: 10px;
+            width: 300px; /* Set your desired fixed width here */
+            overflow: hidden; /* Add overflow: hidden to prevent content from overflowing */
+            white-space: nowrap; /* Prevent text from wrapping to the next line */
+            text-overflow: ellipsis;
         }
 
         .morning {
@@ -79,26 +83,17 @@
                 <div class="timeline">
                     <div class="morning">
                         <div class="activity">
-                            <asp:Label ID="monday_morning_workout" runat="server" Text="Label"></asp:Label>
-                        </div>
-                        <div class="activity">
-                            <asp:Label ID="monday_morning_diet" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="monday_morning_workout" runat="server"></asp:Label>
                         </div>
                     </div>
                     <div class="afternoon">
                         <div class="activity">
-                            <asp:Label ID="monday_afternoon_workout" runat="server" Text="Label"></asp:Label>
-                        </div>
-                        <div class="activity">
-                            <asp:Label ID="monday_afternoon_diet" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="monday_afternoon_workout" runat="server"></asp:Label>
                         </div>
                     </div>
                     <div class="evening">
                         <div class="activity">
-                            <asp:Label ID="monday_evening_workout" runat="server" Text="Label"></asp:Label>
-                        </div>
-                        <div class="activity">
-                            <asp:Label ID="monday_evening_diet" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="monday_evening_workout" runat="server"></asp:Label>
                         </div>
                     </div>
                 </div>
@@ -109,27 +104,20 @@
                 <div class="timeline">
                     <div class="morning">
                         <div class="activity">
-                            <asp:Label ID="tuesday_morning_workout" runat="server" Text="Label"></asp:Label>
-                        </div>
-                        <div class="activity">
-                            <asp:Label ID="tuesday_morning_diet" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="tuesday_morning_workout" runat="server"></asp:Label>
                         </div>
                     </div>
                     <div class="afternoon">
                         <div class="activity">
-                            <asp:Label ID="tuesday_afternoon_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="tuesday_afternoon_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="tuesday_afternoon_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="evening">
                         <div class="activity">
-                            <asp:Label ID="tuesday_evening_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="tuesday_evening_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="tuesday_evening_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -139,27 +127,21 @@
                 <div class="timeline">
                     <div class="morning">
                         <div class="activity">
-                            <asp:Label ID="wednesday_morning_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="wednesday_morning_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="wednesday_morning_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="afternoon">
                         <div class="activity">
-                            <asp:Label ID="wednesday_afternoon_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="wednesday_afternoon_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="wednesday_afternoon_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="evening">
                         <div class="activity">
-                            <asp:Label ID="wednesday_evening_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="wednesday_evening_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="wednesday_evening_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -169,27 +151,21 @@
                 <div class="timeline">
                     <div class="morning">
                         <div class="activity">
-                            <asp:Label ID="thursday_morning_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="thursday_morning_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="thursday_morning_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="afternoon">
                         <div class="activity">
-                            <asp:Label ID="thursday_afternoon_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="thursday_afternoon_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="thursday_afternoon_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="evening">
                         <div class="activity">
-                            <asp:Label ID="thursday_evening_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="thursday_evening_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="thursday_evening_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -199,27 +175,21 @@
                 <div class="timeline">
                     <div class="morning">
                         <div class="activity">
-                            <asp:Label ID="friday_morning_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="friday_morning_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="friday_morning_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="afternoon">
                         <div class="activity">
-                            <asp:Label ID="friday_afternoon_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="friday_afternoon_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="friday_afternoon_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="evening">
                         <div class="activity">
-                            <asp:Label ID="friday_evening_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="friday_evening_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="friday_evening_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -230,26 +200,19 @@
                 <div class="timeline">
                     <div class="morning">
                         <div class="activity">
-                            <asp:Label ID="saturday_morning_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="saturday_morning_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="saturday_morning_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="afternoon">
                         <div class="activity">
-                            <asp:Label ID="saturday_afternoon_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="saturday_afternoon_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="saturday_afternoon_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="evening">
                         <div class="activity">
-                            <asp:Label ID="saturday_evening_workout" runat="server" Text="Label"></asp:Label>
-                        </div>
-                        <div class="activity">
-                            <asp:Label ID="saturday_evening_diet" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="saturday_evening_workout" runat="server"></asp:Label>
                         </div>
                     </div>
                 </div>
@@ -260,27 +223,21 @@
                 <div class="timeline">
                     <div class="morning">
                         <div class="activity">
-                            <asp:Label ID="sunday_morning_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="sunday_morning_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="sunday_morning_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="afternoon">
                         <div class="activity">
-                            <asp:Label ID="sunday_afternoon_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="sunday_afternoon_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="sunday_afternoon_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                     <div class="evening">
                         <div class="activity">
-                            <asp:Label ID="sunday_evening_workout" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="sunday_evening_workout" runat="server"></asp:Label>
                         </div>
-                        <div class="activity">
-                            <asp:Label ID="sunday_evening_diet" runat="server" Text="Label"></asp:Label>
-                        </div>
+
                     </div>
                 </div>
             </div>

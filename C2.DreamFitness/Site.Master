@@ -99,7 +99,9 @@
                             </asp:LinkButton>
                         </div>
                         <div class="me-4">
-                            <p class="text-start">My Schedule</p>
+                             <asp:LinkButton runat="server" OnClick="navigateToSchedule" CssClass="menu-option">
+                                 <p class="text-start">My Schedule</p>
+                             </asp:LinkButton>
                         </div>
                         <div class="me-4" onmouseover="showCategoriesMenu()" onmouseout="hideCategoriesMenu()">
                             <p class="text-start">Categories</p>

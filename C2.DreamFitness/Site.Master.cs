@@ -39,6 +39,9 @@ namespace C2.DreamFitness
         {
             Response.Redirect("MyWorkouts.aspx");
         }
-        
+        protected void navigateToSchedule(object sender, EventArgs e)
+        {
+            Response.Redirect("MySchedule.aspx");
+        }
     }
 }
