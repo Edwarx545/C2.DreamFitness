@@ -87,7 +87,7 @@
                                 <asp:Label ID="Label6" class="exercise-label" runat="server" Text='<%# "Recipe description: " + Eval("recipe_desc") %>'></asp:Label>
                                 <asp:Label ID="Label8" class="exercise-label" runat="server" Text='<%# "Recipe type: " + Eval("recipe_type") %>'></asp:Label>
                                 <asp:Label ID="Label7" class="exercise-label" runat="server" Text='<%# "How to cook: " %>'></asp:Label>
-                                <asp:Label ID="Label10" class="exercise-label" runat="server" Text='<%# Eval("recipe_how_to") %>'></asp:Label>
+                                <asp:Label ID="Label10" runat="server" Text='<%# "" + Eval("recipe_how_to").ToString().Replace("\\n", Environment.NewLine) %>' CssClass="exercise-label" style="white-space: pre;"></asp:Label>
                             </div>
                         </ItemTemplate>
                     </asp:DataList>
