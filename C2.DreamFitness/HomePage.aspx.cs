@@ -38,7 +38,7 @@ namespace C2.DreamFitness.App_Start
             }
             else
             {
-                string script = "alert('You need to pay before using this function');";
+                string script = "alert('You need to pay before using this page');";
                 ClientScript.RegisterStartupScript(this.GetType(), "PaymentAlert", script, true);
             }
         }
@@ -61,7 +61,7 @@ namespace C2.DreamFitness.App_Start
             }
             else
             {
-                string script = "alert('You need to pay before using this function');";
+                string script = "alert('You need to pay before using this page');";
                 ClientScript.RegisterStartupScript(this.GetType(), "PaymentAlert", script, true);
             }
            
