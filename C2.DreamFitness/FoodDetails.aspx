@@ -1,30 +1,30 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FoodDetails.aspx.cs" Inherits="C2.DreamFitness.FoodDetails" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style>
-        .background {
-            background-image: url('img/dark-background.png');
-        }
+        /* ... Các phần style từ trang master ... */
 
-        body {
-            background-image: url('img/dark-background.png');
-            margin: 0;
-            padding: 0;
-            text-align: left;
-        }
-
-        .container {
-            margin-top: 50px;
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Chia layout thành 2 cột bằng nhau */
+            gap: 20px;
+            padding: 20px;
+            background-color: #333; /* Màu nền đen cho chế độ tối */
+            color: #fff; /* Màu chữ trắng cho chế độ tối */
+            border-radius: 10px; /* Góc bo tròn cho toàn bộ khối */
         }
 
         .exercise-container {
-            margin: 5px;
-            width: auto;
+            width: 100%;
             display: flex;
             flex-direction: column;
             text-align: left;
+            padding: 20px;
+            border-radius: 10px; /* Góc bo tròn */
+            background-color: #fff; /* Màu nền trắng cho phần thức ăn */
+            color: #000; /* Màu chữ đen cho phần thức ăn */
         }
 
         .exercise-image {
@@ -33,51 +33,66 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+            border-radius: 10px; /* Góc bo tròn cho hình ảnh */
         }
-
 
         .exercise-label {
             margin-top: 10px;
-            margin-left: 50px;
-            margin-right: 70px;
+            margin-left: 0;
             text-align: left;
+        }
+
+        .context {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            color: #000;
+        }
+
+        /* Màu sắc và kiểu hiển thị mới cho chế độ tối */
+        @media (prefers-color-scheme: dark) {
+            .exercise-container {
+                background-color: #333; /* Màu nền đen cho chế độ tối */
+                color: #fff; /* Màu chữ trắng cho chế độ tối */
+            }
+
+            .context {
+                background-color: #333;
+                color: #fff;
+            }
         }
     </style>
     <body>
         <div class="container">
-            <asp:DataList ID="DataList1" runat="server" CssClass="Catego" CellPadding="0" CellSpacing="0">
-                <ItemTemplate>
-                    <div class="exercise-container">
-                        <asp:Image ID="Image1" runat="server" CssClass="exercise-image" ImageUrl='<%# Eval("food_image")%>'></asp:Image>
-                    </div>
-                    <asp:Label ID="Label1" runat="server" Style="font-size: 30px; width: 1255px; display: flex; flex-direction: column; text-align: center; align-items: center;"
-                        Text='<%# Eval("food_item_name") %>'></asp:Label>
-                    <div class="exercise-container">
-                        <asp:Label ID="Label3" class="exercise-label" runat="server" Text='<%# "Protein: " + Eval("food_item_proteins") %>'></asp:Label>
-                        <asp:Label ID="Label2" runat="server" class="exercise-label" Text='<%# "Carbonhydrates: " + Eval("food_item_carbonhydrates") %>'> </asp:Label>
-                        <asp:Label ID="Label4" runat="server" class="exercise-label" Text='<%# "Calo: " + Eval("food_item_calories") %>'> </asp:Label>
-                        <asp:Label ID="Label5" runat="server" class="exercise-label" Text='<%# "Description: " + Eval("Food_item_desc") %>'> </asp:Label>
-                        <%--                        <asp:Label ID="Label6" runat="server" class="exercise-label" Text='<%# "Intermediate rep: " + Eval("intermidiate_rep") %>'> </asp:Label>
-                        <asp:Label ID="Label7" runat="server" class="exercise-label" Text='<%# "Advanced rep: " + Eval("Advanced_rep") %>'> </asp:Label>
-                        <asp:Label ID="Label8" runat="server" class="exercise-label" Text='<%# "Rest between set: " + Eval("rest_between_set") %>'> </asp:Label>
-                        <asp:Label ID="Label9" runat="server" class="exercise-label" Text='<%# "Exercise set: " + Eval("exercise_set") %>'> </asp:Label>
-                        <asp:Label ID="Label10" runat="server" class="exercise-label" Text='<%# "Description: " + Eval("exercise_desc") %>'> </asp:Label>--%>
-                    </div>
-                </ItemTemplate>
-            </asp:DataList>
-            <asp:DataList ID="DataList2" runat="server" CssClass="Catego" CellPadding="0" CellSpacing="0">
-                <ItemTemplate>
-                    <asp:Label ID="Label1" runat="server" Style="font-size: 30px; width: 1255px; display: flex; flex-direction: column; text-align: center; align-items: center;"
-                        Text='<%# Eval("recipe_name") %>'></asp:Label>
-                    <div class="exercise-container">
-                        <asp:Label ID="Label6" class="exercise-label" runat="server" Text='<%# "Recipe description: " + Eval("recipe_desc") %>'></asp:Label>
-                        <asp:Label ID="Label8" class="exercise-label" runat="server" Text='<%# "Recipe type: " + Eval("recipe_type") %>'></asp:Label>
-                        <asp:Label ID="Label7" class="exercise-label" runat="server" Text='<%# "How to cook: " %>'></asp:Label>
-                        <asp:Label ID="Label10" class="exercise-label" runat="server" Text='<%# "" + Eval("recipe_how_to") %>'></asp:Label>
-                        <br />
-                        <br />
-                </ItemTemplate>
-            </asp:DataList>
+            <div class="main-content">
+                <asp:DataList ID="DataList1" runat="server" CssClass="Catego" CellPadding="0" CellSpacing="0">
+                    <ItemTemplate>
+                        <div class="exercise-container">
+                            <asp:Image ID="Image1" runat="server" CssClass="exercise-image" ImageUrl='<%# Eval("food_image")%>' />
+                            <asp:Label ID="Label1" runat="server" Style="font-size: 30px; text-align: center; color: black; margin-top: 20px;" Text='<%# Eval("food_item_name") %>'></asp:Label>
+                            <div class="exercise-container">
+                                <asp:Label ID="Label3" class="exercise-label" runat="server" Text='<%# "Protein: " + Eval("food_item_proteins") %>'></asp:Label>
+                                <asp:Label ID="Label2" runat="server" class="exercise-label" Text='<%# "Carbohydrates: " + Eval("food_item_carbonhydrates") %>'></asp:Label>
+                                <asp:Label ID="Label4" runat="server" class="exercise-label" Text='<%# "Calories: " + Eval("food_item_calories") %>'></asp:Label>
+                                <asp:Label ID="Label5" runat="server" class="exercise-label" Text='<%# "Description: " + Eval("Food_item_desc") %>'></asp:Label>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:DataList>
+                <div class="context">
+                    <asp:DataList ID="DataList2" runat="server" CssClass="Catego" CellPadding="0" CellSpacing="0">
+                        <ItemTemplate>
+                            <div class="exercise-container">
+                                <asp:Label ID="Label1" runat="server" Style="font-size: 30px; color: black; text-align: center;" Text='<%# Eval("recipe_name") %>'></asp:Label>
+                                <asp:Label ID="Label6" class="exercise-label" runat="server" Text='<%# "Recipe description: " + Eval("recipe_desc") %>'></asp:Label>
+                                <asp:Label ID="Label8" class="exercise-label" runat="server" Text='<%# "Recipe type: " + Eval("recipe_type") %>'></asp:Label>
+                                <asp:Label ID="Label7" class="exercise-label" runat="server" Text='<%# "How to cook: " %>'></asp:Label>
+                                <asp:Label ID="Label10" class="exercise-label" runat="server" Text='<%# Eval("recipe_how_to") %>'></asp:Label>
+                            </div>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </div>
+            </div>
         </div>
     </body>
     <script>

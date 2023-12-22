@@ -32,23 +32,26 @@
             /* Add some padding to the div for visual effect */
         }
 
-        .white-border:hover {
-            background-color: #097fd9;
-            border: 1px solid #097fd9;
+            .white-border:hover {
+                background-color: #097fd9;
+                border: 1px solid #097fd9;
+            }
+
+                .white-border:hover p {
+                    color: white;
+                }
+
+                .white-border:hover a {
+                    color: white;
+                }
+
+        .menu-option {
+            text-decoration: none;
+            color: white;
         }
 
-        .white-border:hover p {
-            color: white;
-        }
-        .white-border:hover a {
-            color: white;
-        }
-        .menu-option{
-            text-decoration:none;
-            color:white;
-        }
         #categoriesMenuContainer {
-        position: relative;
+            position: relative;
         }
 
         #categoriesMenuList {
@@ -62,24 +65,24 @@
             border-radius: 4px;
         }
 
-        #categoriesMenuList li {
-            padding: 10px;
-            border-bottom: 1px solid #555;
-        }
+            #categoriesMenuList li {
+                padding: 10px;
+                border-bottom: 1px solid #555;
+            }
 
-        #categoriesMenuList li:last-child {
-            border-bottom: none;
-        }
+                #categoriesMenuList li:last-child {
+                    border-bottom: none;
+                }
 
-        #categoriesMenuList a {
-            text-decoration: none;
-            color: white;
-            display: block;
-        }
+            #categoriesMenuList a {
+                text-decoration: none;
+                color: white;
+                display: block;
+            }
 
-        #categoriesMenuList a:hover {
-            background-color: #555;
-        }
+                #categoriesMenuList a:hover {
+                    background-color: #555;
+                }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -106,10 +109,10 @@
                             <div id="categoriesMenuContainer" style="position: absolute;">
                                 <ul id="categoriesMenuList" style="display: none;">
                                     <li>
-                                        <asp:LinkButton ID="LinkButton2" class="dropdown-item" runat="server" Text="Find Food" OnClick="btn_findfood" style="text-decoration: none" ForeColor="White" />
+                                        <asp:LinkButton ID="LinkButton2" class="dropdown-item" runat="server" Text="Find Food" OnClick="btn_findfood" Style="text-decoration: none" ForeColor="White" />
                                     </li>
                                     <li>
-                                        <asp:LinkButton ID="LinkButton3" class="dropdown-item" runat="server" Text="Find Exercise" OnClick="btn_findexercise" style="text-decoration: none" ForeColor="White" />
+                                        <asp:LinkButton ID="LinkButton3" class="dropdown-item" runat="server" Text="Find Exercise" OnClick="btn_findexercise" Style="text-decoration: none" ForeColor="White" />
                                     </li>
                                 </ul>
                             </div>
@@ -117,9 +120,7 @@
                         <div class="me-4">
                             <p class="text-start">Community</p>
                         </div>
-                        
                     </div>
-
                     <div>
                         <div class="dropdown">
                             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="userDropdown"
@@ -127,31 +128,34 @@
                                 <img src="img\user_icon.png" alt="Custom Icon" style="height: 30px;">
                             </a>
                             <div class="dropdown-menu" aria-labelledby="userDropdown">
-                                <a class="text-start"> <asp:LinkButton ID="LinkButton1" class="dropdown-item" runat="server" Text="My Workouts" OnClick="navigateToMyWorkouts" style="text-decoration: none" ForeColor="White" /></a>
+                                <a class="text-start">
+                                    <asp:LinkButton ID="LinkButton1" class="dropdown-item" runat="server" Text="My Workouts" OnClick="navigateToMyWorkouts" Style="text-decoration: none" ForeColor="Black" /></a>
                                 <a class="dropdown-item" href="UserProfile">Profile</a>
                                 <a class="dropdown-item" href="#">Settings</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item"> <asp:LinkButton ID="Logout2" class="dropdown-item" runat="server" Text="Log Out" OnClick="btn_Logout" style="text-decoration: none" /> </a>
+                                <a class="dropdown-item">
+                                    <asp:LinkButton ID="Logout2" class="dropdown-item" runat="server" Text="Log Out" OnClick="btn_Logout" Style="text-decoration: none" />
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
     </form>
     <script>
-    function showCategoriesMenu() {
-        var categoriesMenuList = document.getElementById("categoriesMenuList");
-        categoriesMenuList.style.display = "block";
-    }
+        function showCategoriesMenu() {
+            var categoriesMenuList = document.getElementById("categoriesMenuList");
+            categoriesMenuList.style.display = "block";
+        }
 
-    function hideCategoriesMenu() {
-        var categoriesMenuList = document.getElementById("categoriesMenuList");
-        categoriesMenuList.style.display = "none";
-    }
+        function hideCategoriesMenu() {
+            var categoriesMenuList = document.getElementById("categoriesMenuList");
+            categoriesMenuList.style.display = "none";
+        }
     </script>
 </body>
 </html>

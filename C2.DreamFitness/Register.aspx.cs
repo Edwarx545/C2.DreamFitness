@@ -45,7 +45,7 @@ namespace C2.DreamFitness
                 }
                 else
                 {
-                    string sqlthem = "Insert into Users values('" + name + "',01/01/2000,00000000,'" + tk + "','" + mke + "' )";                 
+                    string sqlthem = "Insert into Users values('" + name + "',01/01/2000,00000000,'" + tk + "','" + mke + "', '' )";                 
                     cn.ExecuteNonQuery(sqlthem);
                     lblErrorMessage1.Text = "Register successfull";
                     lblErrorMessage1.Visible = true;
