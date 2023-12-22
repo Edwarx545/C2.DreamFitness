@@ -102,7 +102,7 @@
                             </asp:LinkButton>
                         </div>
                         <div class="me-4">
-                             <asp:LinkButton runat="server" OnClick="navigateToSchedule" CssClass="menu-option">
+                             <asp:LinkButton runat="server" CssClass="menu-option"  PostBackUrl="MySchedule.aspx">
                                  <p class="text-start">My Schedule</p>
                              </asp:LinkButton>
                         </div>
@@ -111,10 +111,10 @@
                             <div id="categoriesMenuContainer" style="position: absolute;">
                                 <ul id="categoriesMenuList" style="display: none;">
                                     <li>
-                                        <asp:LinkButton ID="LinkButton2" class="dropdown-item" runat="server" Text="Find Food" OnClick="btn_findfood" Style="text-decoration: none" ForeColor="White" />
+                                        <asp:LinkButton ID="LinkButton2" class="dropdown-item" runat="server" Text="Find Food" PostBackUrl="Findfood.aspx" Style="text-decoration: none" ForeColor="White" />
                                     </li>
                                     <li>
-                                        <asp:LinkButton ID="LinkButton3" class="dropdown-item" runat="server" Text="Find Exercise" OnClick="btn_findexercise" Style="text-decoration: none" ForeColor="White" />
+                                        <asp:LinkButton ID="LinkButton3" class="dropdown-item" runat="server" Text="Find Exercise" PostBackUrl="Findexercise.aspx" Style="text-decoration: none" ForeColor="White" />
                                     </li>
                                 </ul>
                             </div>
@@ -131,7 +131,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="userDropdown">
                                 <a class="text-start">
-                                    <asp:LinkButton ID="LinkButton1" class="dropdown-item" runat="server" Text="My Workouts" OnClick="navigateToMyWorkouts" Style="text-decoration: none" ForeColor="Black" /></a>
+                                    <asp:LinkButton ID="LinkButton1" class="dropdown-item" runat="server" Text="My Workouts" PostBackUrl="MyWorkouts.aspx" OnClick="navigateToMyWorkouts" Style="text-decoration: none" ForeColor="Black" /></a>
                                 <a class="dropdown-item" href="UserProfile">Profile</a>
                                 <a class="dropdown-item" href="#">Settings</a>
                                 <div class="dropdown-divider"></div>

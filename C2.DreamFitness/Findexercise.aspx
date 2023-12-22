@@ -74,7 +74,7 @@
                 <asp:Button ID="btnSearch" class="btnsearch1" runat="server" OnClick="btnSearch_Click"></asp:Button>
             </div>
             <div>
-                <asp:DataList ID="DataList5" runat="server" Style="justify-content: space-between;" RepeatColumns="3" RepeatDirection="Vertical">
+                <asp:DataList runat="server" ID="DataList5" Style="justify-content: space-between;" RepeatColumns="3" RepeatDirection="Vertical">
                     <ItemTemplate>
                         <div class="" style="margin: 20px; width: auto">
                             <asp:Image ID="Image1" runat="server" Style="width: auto; height: 325px" ImageUrl='<%# Eval("exercise_img")%>'></asp:Image>

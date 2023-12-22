@@ -14,19 +14,7 @@ namespace C2.DreamFitness
         Connector ketnoi = new Connector();
         protected void Page_Load(object sender, EventArgs e)
         {
-            string userId = GetUserIdFromSession();
-            string sql = "SELECT * FROM Users WHERE user_id = '" + userid + "' and user_paid = 'Y' ";
-            DataTable userData = ketnoi.docdulieu(sql);
-            if (userData.Rows.Count > 0)
-            {
-
-            }
-            else
-            {
-                Response.Redirect("HomePage.aspx");
-                string script = "alert('Bạn cần thanh toán trước khi sử dụng chức năng này');";
-                ClientScript.RegisterStartupScript(this.GetType(), "PaymentAlert", script, true);
-            }
+           
         }
         protected void navigateToWorkoutTemplateSelectionPage(object sender, EventArgs e)
         {

@@ -42,7 +42,7 @@
 
             <div class="container d-flex justify-content-between mt-5">
                 <div style="width: 300px">
-                    <asp:LinkButton ID="myLinkButton" runat="server" PostBackUrl="WorkoutBuilderTypePage.aspx" OnClick="navigateToWorkoutBuilderTypePage" Style="text-decoration: none; color: #FFFFFF;">
+                    <asp:LinkButton ID="myLinkButton" runat="server" OnClick="navigateToWorkoutBuilderTypePage" Style="text-decoration: none; color: #FFFFFF;">
                       <div class="ps-3 pt-3 white-border" style="height: 300px;">
                         <img src="img\icons8-fitness-100 (1).png" alt="" style="height: 40px;margin-bottom: 20px;">
                         <p style="font-size: 25px; font-weight: bold;">Workout</p>
@@ -55,7 +55,7 @@
                 </div>
 
                 <div style="width: 300px">
-                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="FoodBuilderTypePage.aspx" Style="text-decoration: none; color: #FFFFFF;">
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="FoodBuilderTypePage_OnClick" Style="text-decoration: none; color: #FFFFFF;">
                             <div class="ps-3 pt-3 white-border" style="height: 300px;">
                                 <img src="img\icons8-diet-64.png" alt="" style="height: 40px; margin-bottom: 20px;">
                                 <p style="font-size: 25px; font-weight: bold;">Diet</p>

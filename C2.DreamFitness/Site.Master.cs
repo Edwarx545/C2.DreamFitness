@@ -23,25 +23,25 @@ namespace C2.DreamFitness
             }
             Server.Transfer("Default.aspx");
         }
-        protected void btn_findfood(object sender, EventArgs e)
-        {
-            Response.Redirect("Findfood.aspx");
-        }
-        protected void btn_findexercise(object sender, EventArgs e)
-        {
-            Response.Redirect("Findexercise.aspx");
-        }
+        //protected void btn_findfood(object sender, EventArgs e)
+        //{
+        //    Server.Transfer("Findfood.aspx");
+        //}
+        //protected void btn_findexercise(object sender, EventArgs e)
+        //{
+        //    Server.Transfer("Findexercise.aspx");
+        //}
         protected void navigateToHomePage(object sender, EventArgs e)
         {
             Server.Transfer("HomePage.aspx");
         }
         protected void navigateToMyWorkouts(object sender, EventArgs e)
         {
-            Response.Redirect("MyWorkouts.aspx");
+            Server.Transfer("MyWorkouts.aspx");
         }
-        protected void navigateToSchedule(object sender, EventArgs e)
-        {
-            Response.Redirect("MySchedule.aspx");
-        }
+        //protected void navigateToSchedule(object sender, EventArgs e)
+        //{
+        //    Server.Transfer("MySchedule.aspx");
+        //}
     }
 }
